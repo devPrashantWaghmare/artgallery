@@ -1,0 +1,302 @@
+\user\OneDrive\Desktop>python create_folder_structure.py
+Folder structure of: D:\Artsell
+├── backend
+│   ├── .env
+│   ├── components
+│   ├── config
+│   │   ├── aws.js
+│   │   ├── db.js
+│   │   └── twilio.js
+│   ├── controllers
+│   │   ├── adminController.js
+│   │   ├── artistController.js
+│   │   ├── authController.js
+│   │   ├── fileController.js
+│   │   ├── kycController.js
+│   │   ├── otpController.js
+│   │   ├── paymentController.js
+│   │   ├── portfolioController.js
+│   │   ├── productController.js
+│   │   ├── roleController.js
+│   │   ├── subadminController.js
+│   │   ├── userController.js
+│   │   └── userService.js
+│   ├── middleware
+│   │   ├── authMiddleware.js
+│   │   ├── multerMiddleware.js
+│   │   └── tokenService.js
+│   ├── models
+│   │   ├── Feedback.js
+│   │   ├── kyc
+│   │   │   ├── bankupiDetails.js
+│   │   │   └── kyc.js
+│   │   ├── Notification.js
+│   │   ├── productDetails
+│   │   │   ├── ArtCategories.js
+│   │   │   ├── ArtProduct.js
+│   │   │   ├── Content.js
+│   │   │   ├── Filters.js
+│   │   │   └── ProductTypes.js
+│   │   ├── transactions
+│   │   │   ├── Coupon.js
+│   │   │   ├── Payment.js
+│   │   │   ├── Prices.js
+│   │   │   └── Transaction.js
+│   │   └── UserDetails
+│   │       ├── admin.js
+│   │       ├── artist.js
+│   │       ├── baseUser.js
+│   │       ├── normalUser.js
+│   │       ├── permissionService.js
+│   │       ├── Portfolio.js
+│   │       ├── Profile.js
+│   │       ├── role.js
+│   │       ├── roleService.js
+│   │       └── subadmin.js
+│   ├── node
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── adminRoutes.js
+│   │   ├── artistRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── couponRoutes.js
+│   │   ├── fileRoutes.js
+│   │   ├── otpRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   ├── productRoutes.js
+│   │   ├── roleRoutes.js
+│   │   ├── subadminRoutes.js
+│   │   └── userRoutes.js
+│   ├── server.js
+│   ├── services
+│   │   └── s3Service.js
+│   └── utils
+│       ├── customError.js
+│       ├── email.js
+│       └── errorHandler.js
+├── frontend
+│   ├── .env.local
+│   ├── .eslintrc.json
+│   ├── .gitignore
+│   ├── jsconfig.json
+│   ├── next-env.d.ts
+│   ├── next.config.mjs
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── public
+│   │   ├── artworks
+│   │   │   ├── image1.png
+│   │   │   ├── image2.png
+│   │   │   ├── image3.png
+│   │   │   ├── image4.png
+│   │   │   ├── image5.png
+│   │   │   ├── image6.png
+│   │   │   ├── image7.png
+│   │   │   ├── image8.png
+│   │   │   └── image9.png
+│   │   ├── file.svg
+│   │   ├── globe.svg
+│   │   ├── next.svg
+│   │   ├── vercel.svg
+│   │   └── window.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── app
+│   │   │   ├── admin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── layout.js
+│   │   │   │   └── manage-users.js
+│   │   │   ├── api
+│   │   │   │   └── auth
+│   │   │   │       ├── route.js
+│   │   │   │       ├── session.js
+│   │   │   │       └── [...nextauth].js
+│   │   │   ├── artist
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── auth
+│   │   │   │   └── page.js
+│   │   │   ├── favicon.ico
+│   │   │   ├── fonts
+│   │   │   │   ├── GeistMonoVF.woff
+│   │   │   │   └── GeistVF.woff
+│   │   │   ├── globals.css
+│   │   │   ├── layout.js
+│   │   │   ├── page.js
+│   │   │   ├── products
+│   │   │   │   └── page.js
+│   │   │   ├── subadmin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── superadmin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── user
+│   │   │   │   └── layout.js
+│   │   │   └── [role]
+│   │   │       ├── dashboard
+│   │   │       │   ├── layout.js
+│   │   │       │   └── page.js
+│   │   │       └── note
+│   │   ├── auth.js
+│   │   ├── components
+│   │   │   ├── Admin
+│   │   │   │   ├── ArtistReview.js
+│   │   │   │   ├── ArtWorkReview.js
+│   │   │   │   ├── ManageCourses.js
+│   │   │   │   ├── ManageInventory.js
+│   │   │   │   ├── ManageProducts.js
+│   │   │   │   ├── ManageRoles.js
+│   │   │   │   ├── ManageUsers.js
+│   │   │   │   ├── UserActivity.js
+│   │   │   │   ├── UserDetailsBox.js
+│   │   │   │   └── UserSupport.js
+│   │   │   ├── Artist
+│   │   │   │   ├── ArtistCard.js
+│   │   │   │   ├── ArtistProfile.js
+│   │   │   │   ├── BlogUpload.js
+│   │   │   │   ├── ContentSection.js
+│   │   │   │   ├── FinancialSection.js
+│   │   │   │   ├── FinancialsSection.js
+│   │   │   │   ├── KYCComponent.js
+│   │   │   │   ├── ManagePortfolio.js
+│   │   │   │   ├── ManageProfile.js
+│   │   │   │   ├── PaymentInfo.js
+│   │   │   │   ├── ProfileSection.js
+│   │   │   │   ├── SampleUpload.js
+│   │   │   │   ├── Sidebar.js
+│   │   │   │   ├── StatusSection.js
+│   │   │   │   ├── UploadNormalArtworks.js
+│   │   │   │   └── ViewStatus.js
+│   │   │   ├── Auth
+│   │   │   │   ├── ArtistRegister.js
+│   │   │   │   ├── AuthOTP.js
+│   │   │   │   ├── AuthPage.js
+│   │   │   │   ├── AuthPage1.js
+│   │   │   │   └── AuthPassword.js
+│   │   │   ├── Cart
+│   │   │   │   ├── CartItem.js
+│   │   │   │   └── CartSummary.js
+│   │   │   ├── Common
+│   │   │   │   ├── Breadcrumb.js
+│   │   │   │   ├── Button.js
+│   │   │   │   ├── Dashboard.js
+│   │   │   │   ├── Footer.js
+│   │   │   │   ├── NavBar.js
+│   │   │   │   ├── SearchBar.js
+│   │   │   │   ├── sectionComponents.js
+│   │   │   │   └── Sidebar.js
+│   │   │   ├── Home
+│   │   │   │   ├── BlogUpdates.js
+│   │   │   │   ├── CallToAction.js
+│   │   │   │   ├── Features.js
+│   │   │   │   ├── HeroSection.js
+│   │   │   │   ├── HomePage.js
+│   │   │   │   ├── Products.js
+│   │   │   │   └── Testimonials.js
+│   │   │   ├── Product
+│   │   │   │   ├── ArtProducts.js
+│   │   │   │   ├── Filters.js
+│   │   │   │   └── ProductCard.js
+│   │   │   ├── ProtectedRoute.js
+│   │   │   ├── SubAdmin
+│   │   │   │   ├── Analytics.js
+│   │   │   │   ├── ArtworkApproval.js
+│   │   │   │   ├── DeliveryTracking.js
+│   │   │   │   ├── FeedbadkDashboard.js
+│   │   │   │   ├── Notifications.js
+│   │   │   │   ├── Overview.js
+│   │   │   │   ├── RefundRequests.js
+│   │   │   │   ├── SubInventory.js
+│   │   │   │   ├── SubProducts.js
+│   │   │   │   ├── SubRoles.js
+│   │   │   │   ├── SubUserActivity.js
+│   │   │   │   ├── SubUsers.js
+│   │   │   │   └── Transactions.js
+│   │   │   └── User
+│   │   │       ├── EnrolledCourses.js
+│   │   │       ├── Notifications.js
+│   │   │       ├── PerformanceAnalytics.js
+│   │   │       ├── Recommendations.js
+│   │   │       ├── StudyMaterials.js
+│   │   │       └── UserProfile.js
+│   │   ├── config
+│   │   │   └── roleSidebarConfig.js
+│   │   ├── contexts
+│   │   │   ├── AuthContext.js
+│   │   │   ├── CartContext.js
+│   │   │   └── CheckoutContext.js
+│   │   ├── lib
+│   │   │   └── mongodb.js
+│   │   ├── pages
+│   │   │   ├── api
+│   │   │   │   └── auth
+│   │   │   │       └── [...nextauth].js
+│   │   │   └── _app.jsx
+│   │   ├── services
+│   │   │   └── api.js
+│   │   ├── store
+│   │   │   ├── slices
+│   │   │   │   └── authSlice.js
+│   │   │   └── store.js
+│   │   ├── styles
+│   │   │   ├── AdminDashboard.module.css
+│   │   │   ├── App.css
+│   │   │   ├── ArtistDashboard.css
+│   │   │   ├── ArtistProfile.css
+│   │   │   ├── ArtistReview.css
+│   │   │   ├── ArtworkApproval.module.css
+│   │   │   ├── ArtWorkReview.css
+│   │   │   ├── AuthOTP.module.css
+│   │   │   ├── AuthPage.module.css
+│   │   │   ├── AuthPassword.module.css
+│   │   │   ├── BlogUpdates.css
+│   │   │   ├── Breadcrumb.css
+│   │   │   ├── CallToAction.css
+│   │   │   ├── Checkout.css
+│   │   │   ├── Dashboard.module.css
+│   │   │   ├── EnrolledCourses.css
+│   │   │   ├── Features.css
+│   │   │   ├── Footer.css
+│   │   │   ├── HeroSection.css
+│   │   │   ├── HomePage.module.css
+│   │   │   ├── KYCComponent.css
+│   │   │   ├── ManageProducts.css
+│   │   │   ├── ManageRoles.css
+│   │   │   ├── ManageUsers.css
+│   │   │   ├── NavBar.css
+│   │   │   ├── Notifications.css
+│   │   │   ├── PerformanceAnalytics.css
+│   │   │   ├── ProductCard.css
+│   │   │   ├── ProductDetailModal.css
+│   │   │   ├── Products.css
+│   │   │   ├── Recommendations.css
+│   │   │   ├── Sidebar.module.css
+│   │   │   ├── StudyMaterials.css
+│   │   │   ├── SubadminDashboard.module.css
+│   │   │   ├── Testimonials.css
+│   │   │   ├── TestProducts.css
+│   │   │   ├── UploadContent.module.css
+│   │   │   ├── UserDashboard.css
+│   │   │   ├── UserDetailsBox.css
+│   │   │   ├── UserManagement.module.css
+│   │   │   └── UserProfile.css
+│   │   └── utils
+│   │       ├── auth.js
+│   │       ├── constants.js
+│   │       ├── cookie.js
+│   │       ├── cookieConsent.js
+│   │       ├── errorHandler.js
+│   │       ├── helpers.js
+│   │       ├── rbac.js
+│   │       ├── redirect.js
+│   │       └── roleRoutes.js
+│   ├── tailwind.config.js
+│   └── tsconfig.json
+└── notes

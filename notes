@@ -1,0 +1,1251 @@
+FOLDER STRUCTURE
+Microsoft Windows [Version 10.0.19045.5247]
+(c) Microsoft Corporation. All rights reserved.
+Microsoft Windows [Version 10.0.19045.5247]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\user>cd C:\Users\user\OneDrive\Desktop
+
+C:\Users\user\OneDrive\Desktop>python create_folder_structure.py
+Folder structure of: D:\Artsell
+├── backend
+│   ├── .env
+│   ├── components
+│   ├── config
+│   │   ├── aws.js
+│   │   ├── db.js
+│   │   └── twilio.js
+│   ├── controllers
+│   │   ├── adminController.js
+│   │   ├── artistController.js
+│   │   ├── authController.js
+│   │   ├── fileController.js
+│   │   ├── kycController.js
+│   │   ├── otpController.js
+│   │   ├── paymentController.js
+│   │   ├── portfolioController.js
+│   │   ├── productController.js
+│   │   ├── roleController.js
+│   │   ├── subadminController.js
+│   │   ├── userController.js
+│   │   └── userService.js
+│   ├── middleware
+│   │   ├── authMiddleware.js
+│   │   ├── multerMiddleware.js
+│   │   └── tokenService.js
+│   ├── models
+│   │   ├── Feedback.js
+│   │   ├── kyc
+│   │   │   ├── bankupiDetails.js
+│   │   │   └── kyc.js
+│   │   ├── Notification.js
+│   │   ├── productDetails
+│   │   │   ├── ArtCategories.js
+│   │   │   ├── ArtProduct.js
+│   │   │   ├── Content.js
+│   │   │   ├── Filters.js
+│   │   │   └── ProductTypes.js
+│   │   ├── transactions
+│   │   │   ├── Coupon.js
+│   │   │   ├── Payment.js
+│   │   │   ├── Prices.js
+│   │   │   └── Transaction.js
+│   │   └── UserDetails
+│   │       ├── admin.js
+│   │       ├── artist.js
+│   │       ├── baseUser.js
+│   │       ├── normalUser.js
+│   │       ├── permissionService.js
+│   │       ├── Portfolio.js
+│   │       ├── Profile.js
+│   │       ├── role.js
+│   │       ├── roleService.js
+│   │       └── subadmin.js
+│   ├── node
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── adminRoutes.js
+│   │   ├── artistRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── couponRoutes.js
+│   │   ├── fileRoutes.js
+│   │   ├── otpRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   ├── productRoutes.js
+│   │   ├── roleRoutes.js
+│   │   ├── subadminRoutes.js
+│   │   └── userRoutes.js
+│   ├── server.js
+│   ├── services
+│   │   └── s3Service.js
+│   └── utils
+│       ├── customError.js
+│       ├── email.js
+│       └── errorHandler.js
+├── frontend
+│   ├── .env.local
+│   ├── .eslintrc.json
+│   ├── .gitignore
+│   ├── jsconfig.json
+│   ├── next-env.d.ts
+│   ├── next.config.mjs
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── public
+│   │   ├── artworks
+│   │   │   ├── image1.png
+│   │   │   ├── image2.png
+│   │   │   ├── image3.png
+│   │   │   ├── image4.png
+│   │   │   ├── image5.png
+│   │   │   ├── image6.png
+│   │   │   ├── image7.png
+│   │   │   ├── image8.png
+│   │   │   └── image9.png
+│   │   ├── file.svg
+│   │   ├── globe.svg
+│   │   ├── next.svg
+│   │   ├── vercel.svg
+│   │   └── window.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── app
+│   │   │   ├── admin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── layout.js
+│   │   │   │   └── manage-users.js
+│   │   │   ├── api
+│   │   │   │   └── auth
+│   │   │   │       ├── page.js
+│   │   │   │       ├── session.js
+│   │   │   │       └── [...nextauth]
+│   │   │   ├── artist
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── auth
+│   │   │   │   └── page.js
+│   │   │   ├── favicon.ico
+│   │   │   ├── fonts
+│   │   │   │   ├── GeistMonoVF.woff
+│   │   │   │   └── GeistVF.woff
+│   │   │   ├── globals.css
+│   │   │   ├── layout.js
+│   │   │   ├── page.js
+│   │   │   ├── products
+│   │   │   │   └── page.js
+│   │   │   ├── subadmin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── superadmin
+│   │   │   │   ├── dashboard
+│   │   │   │   │   └── page.js
+│   │   │   │   └── layout.js
+│   │   │   ├── user
+│   │   │   │   └── layout.js
+│   │   │   └── [role]
+│   │   │       ├── dashboard
+│   │   │       │   ├── layout.js
+│   │   │       │   └── page.js
+│   │   │       └── note
+│   │   ├── auth.ts
+│   │   ├── components
+│   │   │   ├── Admin
+│   │   │   │   ├── ArtistReview.js
+│   │   │   │   ├── ArtWorkReview.js
+│   │   │   │   ├── ManageCourses.js
+│   │   │   │   ├── ManageInventory.js
+│   │   │   │   ├── ManageProducts.js
+│   │   │   │   ├── ManageRoles.js
+│   │   │   │   ├── ManageUsers.js
+│   │   │   │   ├── UserActivity.js
+│   │   │   │   ├── UserDetailsBox.js
+│   │   │   │   └── UserSupport.js
+│   │   │   ├── Artist
+│   │   │   │   ├── ArtistCard.js
+│   │   │   │   ├── ArtistProfile.js
+│   │   │   │   ├── BlogUpload.js
+│   │   │   │   ├── ContentSection.js
+│   │   │   │   ├── FinancialSection.js
+│   │   │   │   ├── FinancialsSection.js
+│   │   │   │   ├── KYCComponent.js
+│   │   │   │   ├── ManagePortfolio.js
+│   │   │   │   ├── ManageProfile.js
+│   │   │   │   ├── PaymentInfo.js
+│   │   │   │   ├── ProfileSection.js
+│   │   │   │   ├── SampleUpload.js
+│   │   │   │   ├── Sidebar.js
+│   │   │   │   ├── StatusSection.js
+│   │   │   │   ├── UploadNormalArtworks.js
+│   │   │   │   └── ViewStatus.js
+│   │   │   ├── Auth
+│   │   │   │   ├── ArtistRegister.js
+│   │   │   │   ├── AuthOTP.js
+│   │   │   │   ├── AuthPage.js
+│   │   │   │   ├── AuthPage1.js
+│   │   │   │   └── AuthPassword.js
+│   │   │   ├── Cart
+│   │   │   │   ├── CartItem.js
+│   │   │   │   └── CartSummary.js
+│   │   │   ├── Common
+│   │   │   │   ├── Breadcrumb.js
+│   │   │   │   ├── Button.js
+│   │   │   │   ├── Dashboard.js
+│   │   │   │   ├── Footer.js
+│   │   │   │   ├── NavBar.js
+│   │   │   │   ├── SearchBar.js
+│   │   │   │   ├── sectionComponents.js
+│   │   │   │   └── Sidebar.js
+│   │   │   ├── Home
+│   │   │   │   ├── BlogUpdates.js
+│   │   │   │   ├── CallToAction.js
+│   │   │   │   ├── Features.js
+│   │   │   │   ├── HeroSection.js
+│   │   │   │   ├── HomePage.js
+│   │   │   │   ├── Products.js
+│   │   │   │   └── Testimonials.js
+│   │   │   ├── Product
+│   │   │   │   ├── ArtProducts.js
+│   │   │   │   ├── Filters.js
+│   │   │   │   └── ProductCard.js
+│   │   │   ├── ProtectedRoute.js
+│   │   │   ├── SubAdmin
+│   │   │   │   ├── Analytics.js
+│   │   │   │   ├── ArtworkApproval.js
+│   │   │   │   ├── DeliveryTracking.js
+│   │   │   │   ├── FeedbadkDashboard.js
+│   │   │   │   ├── Notifications.js
+│   │   │   │   ├── Overview.js
+│   │   │   │   ├── RefundRequests.js
+│   │   │   │   ├── SubInventory.js
+│   │   │   │   ├── SubProducts.js
+│   │   │   │   ├── SubRoles.js
+│   │   │   │   ├── SubUserActivity.js
+│   │   │   │   ├── SubUsers.js
+│   │   │   │   └── Transactions.js
+│   │   │   └── User
+│   │   │       ├── EnrolledCourses.js
+│   │   │       ├── Notifications.js
+│   │   │       ├── PerformanceAnalytics.js
+│   │   │       ├── Recommendations.js
+│   │   │       ├── StudyMaterials.js
+│   │   │       └── UserProfile.js
+│   │   ├── config
+│   │   │   └── roleSidebarConfig.js
+│   │   ├── contexts
+│   │   │   ├── AuthContext.js
+│   │   │   ├── CartContext.js
+│   │   │   └── CheckoutContext.js
+│   │   ├── lib
+│   │   │   └── mongodb.js
+│   │   ├── pages
+│   │   │   ├── api
+│   │   │   │   └── auth
+│   │   │   │       └── [...nextauth].js
+│   │   │   └── _app.jsx
+│   │   ├── services
+│   │   │   └── api.js
+│   │   ├── store
+│   │   │   ├── slices
+│   │   │   │   └── authSlice.js
+│   │   │   └── store.js
+│   │   ├── styles
+│   │   │   ├── AdminDashboard.module.css
+│   │   │   ├── App.css
+│   │   │   ├── ArtistDashboard.css
+│   │   │   ├── ArtistProfile.css
+│   │   │   ├── ArtistReview.css
+│   │   │   ├── ArtworkApproval.module.css
+│   │   │   ├── ArtWorkReview.css
+│   │   │   ├── AuthOTP.module.css
+│   │   │   ├── AuthPage.module.css
+│   │   │   ├── AuthPassword.module.css
+│   │   │   ├── BlogUpdates.css
+│   │   │   ├── Breadcrumb.css
+│   │   │   ├── CallToAction.css
+│   │   │   ├── Checkout.css
+│   │   │   ├── Dashboard.module.css
+│   │   │   ├── EnrolledCourses.css
+│   │   │   ├── Features.css
+│   │   │   ├── Footer.css
+│   │   │   ├── HeroSection.css
+│   │   │   ├── HomePage.module.css
+│   │   │   ├── KYCComponent.css
+│   │   │   ├── ManageProducts.css
+│   │   │   ├── ManageRoles.css
+│   │   │   ├── ManageUsers.css
+│   │   │   ├── NavBar.css
+│   │   │   ├── Notifications.css
+│   │   │   ├── PerformanceAnalytics.css
+│   │   │   ├── ProductCard.css
+│   │   │   ├── ProductDetailModal.css
+│   │   │   ├── Products.css
+│   │   │   ├── Recommendations.css
+│   │   │   ├── Sidebar.module.css
+│   │   │   ├── StudyMaterials.css
+│   │   │   ├── SubadminDashboard.module.css
+│   │   │   ├── Testimonials.css
+│   │   │   ├── TestProducts.css
+│   │   │   ├── UploadContent.module.css
+│   │   │   ├── UserDashboard.css
+│   │   │   ├── UserDetailsBox.css
+│   │   │   ├── UserManagement.module.css
+│   │   │   └── UserProfile.css
+│   │   └── utils
+│   │       ├── auth.js
+│   │       ├── constants.js
+│   │       ├── cookie.js
+│   │       ├── cookieConsent.js
+│   │       ├── errorHandler.js
+│   │       ├── helpers.js
+│   │       ├── rbac.js
+│   │       ├── redirect
+│   │       ├── redirect.js
+│   │       └── roleRoutes.js
+│   ├── tailwind.config.js
+│   └── tsconfig.json
+└── notes
+
+C:\Users\user\OneDrive\Desktop>
+
+
+
+When it comes to implementing Role-Based Access Control (RBAC) and managing permissions in e-commerce websites, many platforms follow practices aimed at reducing redundancy, simplifying updates, and maintaining flexibility. Here's how other e-commerce platforms typically handle RBAC and permissions:
+
+1. Separation of Role Permissions and User-Specific Permissions
+Approach:
+
+They define roles with predefined permissions in a roles collection/table.
+Users inherit permissions directly from their assigned role, avoiding duplication.
+For exceptions, user-specific permissions are stored separately and override or extend the role-based permissions dynamically.
+Example:
+
+A user might be assigned the "subadmin" role, but with a specific override like canOfferDiscounts: false.
+Implementation in Schema:
+
+json
+Copy code
+{
+  "role": "subadmin",
+  "customPermissions": {
+    "canOfferDiscounts": false
+  }
+}
+2. Permission Grouping
+Permissions are grouped by functionality to simplify management.
+
+Instead of granular flags (canManageProducts, canManageOrders), permissions are categorized into groups like productManagement, orderManagement, etc.
+
+Each group can include specific actions, reducing repetitive key definitions.
+
+Example:
+
+json
+Copy code
+{
+  "role": "admin",
+  "permissions": {
+    "productManagement": ["create", "update", "delete"],
+    "orderManagement": ["view", "refund"],
+    "userManagement": ["suspend", "update"]
+  }
+}
+3. Role Hierarchies
+Permissions are inherited hierarchically to avoid duplication.
+
+For example:
+
+Admin includes all permissions.
+Subadmin includes permissions specific to their scope, such as order and user management but not system-level controls.
+Example:
+
+json
+Copy code
+{
+  "role": "subadmin",
+  "inherits": "user",
+  "permissions": {
+    "canManageOrders": true,
+    "canOfferDiscounts": true
+  }
+}
+4. Fine-Grained Permission Control Using Dynamic Rules
+Platforms allow dynamic rules for permissions, such as which resources or products a user can access.
+
+These rules often involve logic like:
+
+"Subadmins can only access users they manage."
+"Artists can edit only their own listings."
+Example:
+
+json
+Copy code
+{
+  "role": "subadmin",
+  "permissions": {
+    "canManageOrders": { "scope": "assigned" },
+    "canViewReports": { "scope": "team" }
+  }
+}
+5. Storing Permissions in an External Service
+Large platforms use services like AWS IAM, Okta, or a custom permissions service.
+Benefits:
+Centralized permission management across multiple apps or services.
+Real-time updates without schema-level modifications.
+Example: Shopify uses services to manage store owners, staff, and third-party app permissions.
+6. Optimized Permissions Caching
+To avoid redundant queries:
+
+Permissions are computed once and cached with the user session/token.
+This is common in platforms like Amazon or Flipkart, where session tokens include encoded permissions.
+Reduces database hits for every request.
+
+Example:
+
+JWT contains:
+json
+Copy code
+{
+  "role": "admin",
+  "permissions": ["createProduct", "updateProduct", "manageUsers"]
+}
+How Your Current Design Compares
+Your current design has a good foundation, but it suffers from redundancy and complexity due to the following:
+
+Repetition of permissions in multiple schemas (users, roles, role_permissions).
+Lack of grouping or inheritance leads to difficulty managing large permission sets.
+Overly granular permissions without dynamic rules for specific cases.
+Recommendations to Improve Your Design
+Refactor to Avoid Repetition:
+
+Store permissions centrally in roles.
+Add a customPermissions field for user-specific overrides.
+Use Grouped or Categorized Permissions:
+
+Instead of individual flags, use categorized permissions like orderManagement, userManagement.
+Implement Inheritance or Dynamic Rules:
+
+Allow roles to inherit permissions from other roles to simplify updates.
+Introduce Permission Evaluation at Runtime:
+
+Use middleware or utility functions to evaluate user permissions dynamically at runtime.
+Cache Permissions with Tokens:
+
+Consider encoding permissions in JWT or storing them in session storage for faster access.
+
+
+The data shows the roles (`admin`, `subadmin`, etc.) and the permissions assigned to each role. Below is a table outlining the permissions for `admin` and `subadmin` roles.
+
+| **Permission**          | **Admin** | **Subadmin (Overall)** | **Subadmin1** | **Subadmin2** |
+|--------------------------|-----------|-------------------------|---------------|---------------|
+| Can Onboard Artists      | Yes       | Yes                     | Yes           | No            |
+| Can Offer Discounts      | Yes       | Yes                     | Yes           | No            |
+| Can Manage Products      | Yes       | No                      | No            | No            |
+| Can Verify Users         | Yes       | No                      | No            | No            |
+| Can Manage Orders        | Yes       | No                      | Yes           | Yes           |
+| Can Manage Transactions  | Yes       | No                      | No            | No            |
+| Can Manage Payments      | Yes       | No                      | No            | No            |
+| Can View Reports         | No        | No                      | No            | Yes           |
+|--------------------------|-----------|-------------------------|---------------|---------------|
+
+### Explanation:
+1. **Admin** has all permissions (`true` for every permission).
+2. **Subadmin** has limited permissions:
+   - **Subadmin1**:
+     - Can onboard artists.
+     - Can offer discounts.
+     - Can manage orders.
+   - **Subadmin2**:
+     - Can manage orders.
+     - Can view reports.
+
+This detailed breakdown allows for a clear understanding of role-based access control. Let me know if you want further clarification!
+To design a comprehensive workflow for the subadmin's role in managing and approving artwork while aligning with modern e 
+commerce practices, we must break down the processes into user flows, permissions, features, and strategies. Here's a detailed roadmap:
+
+ 
+  
+   
+   
+
+## Key Parameters for Artwork Approval
+### Parameters for Subadmin to Check:
+1. Image Quality 
+    
+     Resolution: Should meet platform standards (e.g., 300 DPI for printing).
+    
+     Clarity: No visible distortions or pixelation.
+2. Dimensions 
+    
+     Ensure dimensions align with product guidelines.
+    
+     Verify aspect ratio and size (e.g., small, medium, large categories).
+3. Frame Availability 
+    
+     Check if framing options are provided or required.
+    
+     Note if framing adheres to platform standards.
+4. Authenticity 
+    
+     Identify AI 
+     generated vs. real artwork:
+      
+       Request an originality certificate if necessary.
+      
+       Run AI detection tools for suspicious images.
+
+5. Description Accuracy 
+    
+     Verify if the description matches the artwork.
+    
+     Ensure keywords (e.g., "canvas," "oil painting") and categories are accurate.
+    
+     Remove irrelevant or misleading details.
+6. Category Validation 
+    
+     Confirm appropriate classification (e.g., abstract, landscape, portrait).
+7. Material Information 
+    
+     Validate materials like "canvas," "oil paint," or "digital print."
+    
+     Ensure material details align with product metadata.
+
+ 
+  
+   
+   
+
+## User Flows
+### 1. Artist Workflow 
+    
+     Upload artwork with title, description, category, material, dimensions, price, and framing options.
+    
+     Submit for review by the subadmin.
+
+### 2. Subadmin Workflow 
+    
+     Login: Authenticate into the subadmin dashboard.
+    
+     View Uploads: Access the "Pending Approvals" section to review newly uploaded artwork.
+    
+     Approve or Request Edits:
+      
+       Approve if all parameters are satisfactory.
+      
+       Request changes if discrepancies exist (e.g., inaccurate description).
+    
+     Assign for Publishing:
+      
+       After approval, assign the artwork for final review by the admin.
+    
+     Post 
+     Approval Tasks:
+      
+       Track sales performance of managed artists' products.
+      
+       Handle artist disputes and queries.
+    
+     Modify Description (if allowed):
+      
+       Fix typos, add keywords for SEO, or reclassify categories.
+
+### 3. Admin Workflow 
+    
+     Oversee approvals granted by subadmins.
+    
+     Ensure pricing aligns with platform strategy.
+    
+     Manage escalations from subadmins/artists/customers.
+    
+     Handle refund requests and high 
+     level complaints.
+
+ 
+  
+   
+   
+
+## Permissions
+### Artist 
+    
+     Upload artwork.
+    
+     Edit description before submission.
+    
+     View status of submissions (approved, rejected, pending).
+    
+     Track sales and earnings.
+
+### Subadmin 
+    
+     Review artwork and descriptions.
+    
+     Approve or request changes.
+    
+     Modify descriptions within limits (optional).
+    
+     Monitor performance of assigned artists.
+    
+     Generate reports for admin.
+
+### Admin 
+    
+     Full access to all subadmin functionalities.
+    
+     Override subadmin approvals if needed.
+    
+     Handle pricing, refunds, disputes, and delivery escalations. 
+     To implement **ReviewArtworks** effectively and onboard artists fully on your eCommerce platform, the following changes in the **Product Schema** and **User Schema** are recommended:
+
+
+---
+
+### **Admin Actions for Artist Onboarding**
+
+| **Step**                     | **Action Required by Admin**                                           | **Dependencies**                                                                                                                                                     |
+|-------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **KYC Verification**          | Verify Aadhaar, PAN, and UPI details.                                 | Update `verificationStatus` in `User` schema with `aadhaarVerified`, `panVerified`, and `upiVerified`.                                                              |
+| **Sample Artwork Submission** | Review submitted sample artworks.                                     | Update `verificationStatus.sampleArtworksReviewed` in the `User` schema and set `reviewStatus` of associated artworks to "Approved" or "Rejected".                  |
+| **Feedback for Rejection**    | Provide comments on rejected artworks.                                | Add `reviewComments` or `artworkReviewDetails.feedbackComments` in the `Product` schema.                                                                            |
+| **Artwork Approval**          | Approve at least one artwork per artist to complete onboarding.       | Update `verificationStatus.sampleArtworksApproved`.                                                                                                                 |
+| **Assign Manager**            | Assign a sub-admin or admin to manage the artist profile.             | Update `managedBy` in the `User` schema.                                                                                                                            |
+| **Final Onboarding**          | Mark the artist as onboarded after meeting all criteria.              | Set `verificationStatus.artistOnboarded` to `true` in the `User` schema.                                                                                            |
+
+---
+
+### **How ReviewArtworks Fits into the Workflow**
+1. **Search and Filter**:
+   - Admins can filter artists by verification status and review artworks submitted by them.
+
+2. **Artist Action Handling**:
+   - Approve or reject KYC documents.
+   - Review artworks and provide feedback or approve them.
+
+3. **Data Fetching**:
+   - Fetch artists and their associated artworks using MongoDB population (`User` -> `Product`).
+
+4. **UI Updates**:
+   - Add buttons for "Approve Artwork," "Request Revision," "View Profile," and "Assign Manager" within the `ReviewArtworks` component.
+
+5. **Trigger Notifications**:
+   - Send email or app notifications to artists when their artworks are reviewed or their onboarding status changes. 
+
+Let me know if you'd like code examples for any of these actions!
+
+ 
+  
+   
+   
+
+## Workflow for Subadmin
+### 1. Approval Workflow 
+    
+     Access "Pending Artwork" dashboard.
+    
+     View details (image, description, category, dimensions).
+    
+     Check parameters: quality, category, authenticity, materials.
+    
+     Approve or reject with reasons.
+    
+     Assign to admin for final listing.
+
+### 2. Performance Tracking Workflow 
+    
+     Monitor sales trends of approved artworks.
+    
+     Provide feedback to artists on improving content.
+
+### 3. Customer Interaction Workflow 
+    
+     Respond to customer complaints about specific artworks.
+    
+     Communicate artist 
+     specific issues to the admin.
+
+ 
+  
+   
+   
+
+## Other Functionalities
+### 1. Delivery Management 
+    
+     Subadmin ensures artwork is ready for dispatch.
+    
+     Track delivery timelines for managed artists.
+    
+     Update statuses like "shipped," "in transit," or "delivered."
+
+### 2. Delivery Tracking 
+    
+     Integrate with courier services for real 
+     time tracking.
+    
+     Share tracking details with customers post 
+     purchase.
+
+### 3. Payments & Refunds 
+    
+     Ensure prompt payouts to artists post 
+     sale.
+    
+     Handle refund requests in case of damaged artwork.
+
+### 4. Shipping 
+    
+     Verify if artists can handle shipping themselves or require platform support.
+    
+     Ensure proper packaging guidelines for fragile items.
+
+### 5. Customer Reviews & Ratings 
+    
+     Manage and moderate reviews for authenticity.
+    
+     Highlight highly 
+     rated artists.
+
+ 
+  
+   
+   
+
+## Strategies for Modern E 
+commerce
+1. Automation 
+    
+     Use AI tools to validate image quality and detect AI 
+     generated content.
+    
+     Automate status updates for faster communication with artists.
+2. SEO Optimization 
+    
+     Ensure descriptions and categories are SEO 
+     friendly to improve discoverability.
+3. Personalized Recommendations 
+    
+     Use customer data to recommend relevant artworks.
+4. Customer Engagement 
+    
+     Enable live chat for artwork queries.
+    
+     Offer "virtual try 
+     on" tools to visualize framed art in rooms.
+5. Dynamic Pricing 
+    
+     Offer discounts during high 
+     demand periods (e.g., holidays).
+
+ 
+  
+   
+   
+
+## Detailed Product Flows
+### 1. Artwork Approval Process 
+    
+     Artist Upload → Subadmin Review → Admin Final Approval → Listed on Platform.
+
+### 2. Order Workflow 
+    
+     Customer Order → Subadmin Ensures Packaging → Courier Pickup → Delivery Tracking → Customer Receives Item.
+
+### 3. Refund Workflow 
+    
+     Customer Refund Request → Admin Review → Initiate Refund.
+
+ 
+  
+   
+   
+
+## Future Functionality Suggestions
+1. Subscription Plans 
+    
+     Offer subscriptions for artists to access premium features.
+2. Auction System 
+    
+     Allow customers to bid on exclusive artworks.
+3. Analytics Dashboard 
+    
+     Provide artists and subadmins with insights into sales performance.
+
+ 
+  
+   
+   
+
+By following this roadmap, your platform can align with modern e 
+commerce standards, ensuring a streamlined experience for artists, subadmins, admins, and customers alike.
+
+
+The subadmin's responsibilities for managing artists in a platform involve ensuring smooth communication, monitoring performance, and maintaining quality control while ensuring compliance with platform policies. Below is a breakdown of the responsibilities and functionalities the subadmin should focus on when managing artists:
+
+---
+
+## Responsibilities of Subadmin for Managing Artists
+
+### 1. Onboarding Artists
+   - Verify Artist Information: Validate the identity and credentials of new artists during onboarding.
+   - Guide on Platform Use: Provide resources, guidelines, and tutorials to help artists navigate the platform effectively.
+   - Assign Categories: Allocate artists to specific categories of art (e.g., oil painting, digital art, sculpture).
+
+### 2. Monitoring Artist Activities
+   - Track Artwork Submissions: Regularly review the artworks uploaded by artists.
+   - Ensure Compliance: Ensure that the submitted artworks comply with platform guidelines (e.g., originality, no AI-generated works unless specified, appropriate descriptions).
+   - Performance Tracking: Use metrics such as submission frequency, artwork approval rates, and sales to evaluate artist performance.
+
+### 3. Approving or Rejecting Artworks
+   - Quality Check: Ensure the artworks meet platform standards, including resolution, dimensions, and framing options.
+   - Category Validation: Verify that artworks are correctly categorized (e.g., Canvas, Oil, Digital).
+   - Description Review: Check if descriptions are accurate, complete, and compelling. Suggest edits if necessary.
+
+### 4. Facilitating Communication
+   - Feedback Loop: Provide constructive feedback to artists for rejected submissions.
+   - Conflict Resolution: Address grievances or disputes from artists related to artwork approvals, payment delays, or other issues.
+
+### 5. Payment and Revenue Management
+   - Track Payments: Monitor artist payouts for sold artworks.
+   - Set Revenue Share: Ensure artists are informed about commission structures or revenue-sharing agreements.
+
+### 6. Encouraging Artist Growth
+   - Promote Artists: Highlight high-performing artists or featured works on the platform.
+   - Offer Training: Provide workshops or resources for artists to improve their skills or marketing techniques.
+
+### 7. Ensuring Policy Compliance
+   - Originality Checks: Verify that uploaded artworks are original and not plagiarized.
+   - Community Guidelines: Enforce platform rules, such as appropriate content and proper categorization.
+
+---
+
+## Functionalities to Include in Subadmin's Manage Artists Section
+
+### 1. Artist Directory
+   - View a list of all managed artists with key details:
+     - Name
+     - Contact Information
+     - Art Categories
+     - Total Approved/Rejected Artworks
+     - Total Sales & Earnings
+
+### 2. Artist Profile Management
+   - View/Update Profiles: Access and update details like artist bios, portfolios, and bank/payment details.
+   - Assign Categories: Allow subadmins to assign or modify the category of artworks an artist can submit.
+
+### 3. Review and Approval Workflow
+   - Artwork List: Display a queue of submitted artworks pending review.
+   - Action Options: Approve, reject, or request edits for artworks with reasons.
+   - Automated Feedback: Send notifications to artists about approvals/rejections with notes.
+
+### 4. Performance Dashboard
+   - Metrics to evaluate artists, such as:
+     - Total uploads
+     - Approval percentage
+     - Sales performance
+     - Feedback scores (e.g., from buyers)
+   - Highlight underperforming or top-performing artists.
+
+### 5. Communication Tools
+   - Message Center: Allow subadmins to send direct messages or announcements to artists.
+   - Notification System: Automatically notify artists about approvals, payments, or guidelines.
+
+### 6. Payment and Transaction Management
+   - View and track:
+     - Pending payments to artists
+     - Commission earned by the platform
+   - Resolve payment disputes in coordination with the admin.
+
+### 7. Reporting and Analytics
+   - Generate reports on:
+     - Artist performance
+     - Artwork quality trends
+     - Revenue generated by specific artists.
+
+---
+
+## Responsibilities After Approval
+
+- Subadmin Role:
+  - Promote approved artworks to relevant categories on the platform.
+  - Monitor sales and ensure timely payouts to artists.
+  - Provide additional marketing suggestions or opportunities for top-performing artists.
+  - Escalate policy violations or complex issues to the admin.
+
+- Admin Role:
+  - Set overarching platform guidelines and strategies.
+  - Oversee subadmins' performance and artist management.
+  - Handle escalations from subadmins (e.g., disputes, policy changes).
+  - Manage platform-wide analytics, payment reconciliation, and marketing.
+
+---
+
+## Workflow for Subadmin Managing Artists
+
+1. Login and View Dashboard
+   - Access a dedicated section for "Manage Artists."
+   - Review performance metrics and pending actions.
+
+2. Onboarding Process
+   - Verify new artist details and approve registrations.
+   - Provide welcome resources and assign categories.
+
+3. Artwork Review
+   - Regularly review submitted artworks.
+   - Approve, reject, or request edits based on quality and policy compliance.
+
+4. Performance Monitoring
+   - Track artist submissions and sales metrics.
+   - Provide feedback to underperforming artists and reward high performers.
+
+5. Payment Management
+   - Ensure payouts are processed on time for sold artworks.
+   - Resolve payment disputes in coordination with admin.
+
+6. Policy Enforcement
+   - Identify and report violations, such as plagiarism or inappropriate content.
+
+7. Regular Communication
+   - Send updates, feedback, and announcements to artists.
+
+8. Reports and Analytics
+   - Generate monthly/weekly reports on artist activities for admin review.
+
+---
+
+## Strategies for Effective Subadmin-Artist Relationship
+
+- Build Trust: Maintain clear communication about expectations and policies.
+- Encourage Collaboration: Involve artists in platform initiatives (e.g., featured art collections).
+- Ensure Transparency: Provide clear metrics for performance evaluation and revenue tracking.
+- Offer Support: Actively assist artists in improving submissions and maximizing sales.
+
+This structured approach ensures a streamlined process for managing artists while fostering a productive and professional relationship.
+
+AADHAR AUTHENTICATION
+host – Aadhaar authentication server address. Actual production server address will be
+provided to ASAs. Note that production servers can only be accessed through private
+secure connection. ASA server should ensure that actual URL is configurable. (For
+development and testing purposes, public URL “auth.uidai.gov.in” can be used.)
+ver – Authentication API version (mandatory). UIDAI may host multiple versions for
+supporting gradual migration. For this specification, version is “2.5”.
+ac – A unique code for the AUA which is assigned by UIDAI. This is an alpha-numeric
+string having maximum length 10.(A default value “public” is available for testing.)
+uid[0] and uid[1] – First 2 digits of Aadhaar Number. When VID, UID Token, or
+encrypted Aadhaar number (future) is used, pass “0” and “0” for these.
+asalk – A valid ASA license key. ASAs must send one of their valid license keys at the
+end of the URL. It is important that license keys are maintained safely. When adding
+license key to the URL, ensure it is “URL encoded” to handle special characters.
+For all valid responses, HTTP response code 200 is used. All application error codes are
+encapsulated in response XML element. In the case of connection and other server
+errors, standard HTTP error response codes are used (4xx codes such as 403, 404, etc.).
+HTTP automatic redirects also should be handled by ASA server.
+
+a. Modern CSS Frameworks
+CSS Grid and Flexbox: These layout modules make it easier to create complex, responsive layouts without the need for frameworks like Bootstrap. CSS Grid provides a two-dimensional layout system, while Flexbox is designed for one-dimensional layouts.
+PostCSS: A tool that allows for automatic processing of CSS, including support for modern features like nesting, autoprefixing, and future CSS syntax.
+CSS Variables: These provide a way to store values for repeated use in stylesheets, improving maintainability and flexibility in themes.
+b. UI Animations
+Framer Motion: A popular library for animating React components. It provides a simple API for creating complex animations like fades, slides, and transitions.
+GSAP (GreenSock Animation Platform): A high-performance animation library for JavaScript that works across all major browsers and devices, enabling smooth animations.
+Lottie: A lightweight library that allows for easy integration of animated vector graphics in JSON format, typically created using Adobe After Effects.
+c. Dark Mode and Custom Themes
+CSS Media Queries: Developers can use @media (prefers-color-scheme: dark) to adapt a site’s theme to users' system preferences for dark or light mode, improving accessibility and user experience.
+Theming with Tailwind CSS: Using its built-in dark mode support, developers can easily create applications that toggle between dark and light themes with minimal effort.
+d. Web Typography
+Variable Fonts: These allow for dynamic adjustments to font properties (weight, width, slant, etc.) without having to load multiple font files. This leads to faster load times and more flexibility.
+Google Fonts: A large, free library of web fonts optimized for use in websites. Google Fonts provides an easy way to integrate beautiful, accessible typography.
+
+## 
+Categories and Types of Paintings
+Based on the analysis of several art platforms like Artoreal, Saatchi Art, and Indian Art Zone, the common categories and types of paintings include:
+
+Art Categories (For Paintings):
+
+Abstract Art
+Modern Art
+Contemporary Art
+Traditional Art
+Landscape Paintings
+Portrait Paintings
+Figurative Art
+Pop Art
+Minimalist Art
+Surrealism
+Impressionism
+Realism
+Expressionism
+Street Art
+Digital Art (for digital artworks)
+Art Types (Specific to Mediums and Materials):
+
+Canvas Paintings
+Oil Paintings
+Acrylic Paintings
+Watercolor Paintings
+Mixed Media
+Ink Paintings
+Charcoal Art
+Hand-Painted Art
+Artoreal specifically highlights categories like Abstract Art, Contemporary Art, and Modern Art, among others, while also featuring types like Digital Art and Canvas Paintings. Saatchi Art and Indian Art Zone further include categories for styles such as Impressionism, Surrealism, and Pop Art.
+
+Expanding to Other Arts (Like Handmade Toys, Décor)
+When you expand beyond paintings to other forms of art
+ like handmade toys or décor articles, the key is to
+  maintain flexibility in your database schema.
+   You can define a general ArtProduct schema with
+    a type field that can cater to different product categories
+     (paintings, toys, décor, etc.) and then separate specific 
+     attributes based on the type of product. 
+
+     Given your vision for a future-proof application with Next.js, here's a recommended approach:
+
+---
+
+### **1. Authentication and Authorization**
+Adopt a robust, scalable, and secure authentication system:
+
+- **Use NextAuth.js** for session management:
+  - Supports multiple providers (email/password, OAuth, SSO, etc.).
+  - Server-side session validation ensures security.
+  - Can easily extend to role-based access control (RBAC).
+  
+- **JWT (JSON Web Tokens)** for APIs:
+  - Use signed tokens for secure, stateless communication.
+  - Store tokens in **HttpOnly cookies** for better security against XSS attacks.
+
+---
+
+### **2. State Management**
+For global state, replace `AuthContext` with:
+
+- **React Query** or **SWR**:
+  - Ideal for fetching, caching, and synchronizing server state.
+  - Automatically revalidates stale data.
+
+- **Redux Toolkit** for complex state:
+  - Use sparingly, mainly for managing non-server-specific UI states.
+
+---
+
+### **3. Scalability with AI Integration**
+- **AI APIs and Models**:
+  - Use services like OpenAI for customization and chatbots.
+  - Host fine-tuned models on services like AWS SageMaker or Azure AI.
+
+- **Serverless Functions**:
+  - Use Next.js API routes to integrate AI model inference endpoints.
+
+---
+
+### **4. Real-Time Features**
+Use WebSocket-based libraries like **Socket.IO** or **Supabase Realtime** for:
+
+- Live delivery tracking.
+- Real-time chatbots or live updates for exhibitions and webinars.
+
+---
+
+### **5. Content Management**
+Implement a CMS tailored for art and media:
+
+- **Sanity.io** or **Strapi**:
+  - Integrates well with Next.js.
+  - Offers flexibility for managing content like videos, articles, and event information.
+
+---
+
+### **6. Media Management**
+For handling videos and images:
+
+- **Cloudinary** or **AWS S3**:
+  - Store and serve media efficiently.
+  - Integrate AI for automatic tagging, resizing, and quality optimization.
+
+---
+
+### **7. Scalability and Future-Proofing**
+- **Modular Architecture**:
+  - Separate features into independent, scalable modules.
+  - Decouple AI, chatbots, and content management into microservices.
+
+- **Headless Architecture**:
+  - Use a headless CMS and APIs to serve data across platforms (web, mobile, etc.).
+
+---
+
+### **8. Deployment and Monitoring**
+- **Vercel**:
+  - Optimized for Next.js with automatic scaling.
+  
+- **Monitoring**:
+  - Use tools like Sentry for error tracking.
+  - Implement observability platforms like Datadog for performance monitoring.
+
+---
+
+This approach ensures your application is flexible, future-proof, and ready to handle complex features and integrations. Let me know if you'd like to dive deeper into any specific aspect!
+src/store/store.js: Redux store and persistor setup.
+src/store/slices/authSlice.js: Auth slice for managing authentication and roles.
+src/app/layout.js: Wraps the app with Redux and Persist providers.
+
+
+Additional Suggestions
+Payment Gateway:
+Integrate a service like Razorpay, Stripe, or PayPal for handling payments.
+Analytics:
+Add tools like Google Analytics or Mixpanel to track user behavior.
+Search & Filtering:
+Use a library like Algolia or Elasticsearch for efficient search and filtering of artworks.
+Image Optimization:
+Use Next.js Image Optimization or an external service like Imgix for fast-loading artwork images.
+
+
+# Case Study: Designing a Modern Website for Selling Artworks
+
+## Overview
+This case study aims to design a modern, visually appealing, and user-friendly e-commerce website for selling artworks. By analyzing the best practices of top global art e-commerce websites and incorporating creative, unique components, this project provides a blueprint for an outstanding online art marketplace.
+
+---
+
+## Inspiration from Top Global Art E-Commerce Websites
+### Websites Analyzed:
+1. **Saatchi Art**  
+2. **Artsy**  
+3. **Artfinder**  
+4. **Etsy (Art Section)**  
+5. **1stdibs (Art Category)**  
+6. **UGallery**  
+7. **Fine Art America**  
+8. **DeviantArt (Shop Section)**  
+9. **Minted**  
+10. **Society6**
+
+### Common Features:
+- **Minimalistic Design:** Most websites emphasize a clean, minimalistic aesthetic to let the artworks take center stage.
+- **High-Quality Images:** The use of large, high-resolution images to showcase artwork details.
+- **Personalized Recommendations:** AI-driven suggestions based on user preferences.
+- **User-Friendly Navigation:** Categories like price, size, style, and medium for filtering artworks.
+- **Responsive Design:** Optimized for all screen sizes.
+- **Artist Stories:** Sections highlighting the artist’s journey to build a connection with buyers.
+
+### Unique Features to Implement:
+1. Interactive 3D visualizers for artworks in rooms.
+2. Augmented Reality (AR) to allow customers to "place" artworks on their walls virtually.
+3. Community features like forums and events for art lovers.
+4. NFT marketplace integration for digital art.
+
+---
+
+## Key Components of the Website Design
+
+### 1. **Homepage**
+- **Hero Section:**
+  - **Background:** Full-screen hero banner with a rotating display of featured artworks.
+  - **Text Overlay:** Minimal text (e.g., "Discover Art That Speaks to You") in bold, sans-serif font (e.g., Montserrat, 60px size).
+  - **CTA Button:** Large, rounded button (“Explore Now”) with gradient colors (e.g., from #FF6F61 to #FFA07A).
+
+- **Color Scheme:**
+  - Neutral base colors (e.g., #F8F9FA) to make the artwork stand out.
+  - Accent colors inspired by art (e.g., #FF6F61, #3A86FF).
+
+- **Sections:**
+  - Trending artworks with horizontal scrolling cards.
+  - "Featured Artists" carousel with artist bios and portraits.
+
+### 2. **Product Page (Artwork Detail)**
+- **Layout:**
+  - **Left Panel:** High-resolution image gallery with zoom-in and 360° views.
+  - **Right Panel:**
+    - Title, artist name, and price prominently displayed.
+    - Drop-down menu for size, framing options, and medium.
+    - CTA buttons (“Add to Cart” and “View in AR”).
+
+- **Interactive Features:**
+  - AR integration with a "View in Your Room" feature.
+  - Related artworks section at the bottom.
+
+- **Color Scheme:**
+  - Muted tones like #E0E0E0 for the background.
+  - Bright buttons for CTA (e.g., #3A86FF with white text).
+
+### 3. **Artist Profiles**
+- **Layout:**
+  - Large portrait image at the top.
+  - Artist’s story in a visually appealing font.
+  - Gallery of their works with a "Follow Artist" button.
+
+- **Color Scheme:**
+  - Warm tones (e.g., #FFE5D9) to evoke emotions.
+
+### 4. **Checkout Page**
+- **Steps:**
+  - Seamless, multi-step process with visual progress indicators.
+  - Minimalistic design with tooltips for assistance.
+
+- **Payment Options:**
+  - Integrate multiple payment methods, including credit cards, PayPal, and cryptocurrency for NFTs.
+
+### 5. **Community Section**
+- **Forums:** Users can discuss topics like "Interior Design Tips" or "Art Trends."
+- **Events Calendar:** For virtual art shows and live events.
+
+---
+
+## Creative Components to Stand Out
+
+### 1. **Interactive Color Matching Tool**
+- Allows users to upload a photo of their space and get recommendations for artworks based on the colors in the room.
+
+### 2. **Mood-Based Search**
+- Users select a mood (e.g., “Calm” or “Energetic”) to see matching artworks.
+
+### 3. **Dynamic Backgrounds**
+- Use subtle animations like shifting gradients in the header to give the website a modern, artistic feel.
+
+### 4. **Pop-Up Modals**
+- For promotions, use artistic frames for modals rather than plain rectangles.
+
+### 5. **Gamification Elements**
+- "Collector’s Badges" for customers who buy frequently.
+- Reward points for engaging with community features.
+
+---
+
+## Presentation Strategy
+
+### 1. **Image Presentation**
+- Full-width images with drop shadows to emphasize depth.
+- Include close-up views to showcase texture and details.
+
+### 2. **Typography**
+- Primary Font: Elegant sans-serif like Montserrat.
+- Secondary Font: Classic serif like Playfair Display for quotes or artist bios.
+
+### 3. **Micro-Interactions**
+- Subtle animations for buttons (e.g., bounce effect when hovered).
+- Loading indicators with artistic motifs (e.g., paintbrush animation).
+
+---
+
+## Themes and Color Combinations
+
+### Themes:
+1. **Modern Minimalism:** Neutral colors with pops of bright accents.
+2. **Art Deco Revival:** Gold, black, and jewel tones.
+3. **Organic and Earthy:** Warm browns, greens, and soft whites.
+
+### Color Combinations:
+- **Option 1:** White (#FFFFFF), Black (#000000), Gold (#FFD700).
+- **Option 2:** Cream (#FFF8E7), Sage Green (#B2C7C4), Terracotta (#E2725B).
+- **Option 3:** Light Grey (#F4F4F4), Midnight Blue (#2E3B55), Coral (#FF6F61).
+
+---
+
+## Final Notes
+
+A modern website for selling artworks should provide not just a platform for purchasing art but also an immersive experience that connects buyers with the art and its creators. By combining cutting-edge technology (like AR and AI), community-driven features, and thoughtful design elements, this platform can stand out in the competitive art e-commerce space.
+
