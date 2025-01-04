@@ -1,0 +1,100 @@
+.manage-products {
+  width: 90%;
+  max-width: 1200px;
+  margin: 70px auto 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: black; /* Ensure text is black */
+}
+
+.manage-products h2 {
+  text-align: center;
+  color: #333; /* Dark grey for heading */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.product-filters input[type="text"],
+.product-filters select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: black; /* Ensure text is black */
+}
+
+.add-product-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-product-button:hover {
+  background-color: #0056b3;
+}
+
+.add-product-form {
+  display: none; /* Initially hidden */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-form.visible {
+  display: block; /* Toggle visibility */
+}
+
+.add-product-form h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: black; /* Ensure text is black */
+}
+
+.add-product-form input:focus,
+.add-product-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-product-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-product-form button[type="submit"]:hover {
+  background-color: #218838;
+}

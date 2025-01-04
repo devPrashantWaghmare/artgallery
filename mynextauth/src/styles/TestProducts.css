@@ -1,0 +1,32 @@
+.product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.product-image {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.price-section {
+    margin-top: 20px;
+}
+
+.buy-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #ff2200;
+}

@@ -1,0 +1,26 @@
+.kyc-component {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .kyc-component h2 {
+    margin-bottom: 10px;
+  }
+  
+  .kyc-component label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .kyc-component input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .kyc-component .error {
+    color: red;
+  }
+  

@@ -1,0 +1,35 @@
+/* src/styles/HeroSection.css */
+.hero {
+    background-color: #6a5acd; /* Purple shade */
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem; /* Adjusted padding for a bigger section */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Larger font size for the title */
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-style: italic; /* Italicized text to give an elegant touch */
+    margin-bottom: 2rem; /* Space between the description and button */
+}
+
+.hero button {
+    background-color: #fbc02d; /* Golden yellow button */
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    background-color: #f57f17; /* Darker yellow for hover */
+}

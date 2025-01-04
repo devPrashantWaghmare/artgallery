@@ -1,0 +1,24 @@
+.enrolled-courses {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.course-card {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.course-card h4 {
+    margin: 5px 0;
+}
+.resume-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.resume-button:hover {
+    background-color: #45a049;
+}

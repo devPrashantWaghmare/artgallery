@@ -1,0 +1,21 @@
+.recommendations {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff8e1;
+}
+.recommended-course-card {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.enroll-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.enroll-button:hover {
+    background-color: #e68900;
+}

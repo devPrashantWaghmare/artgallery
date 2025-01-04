@@ -1,0 +1,158 @@
+.manage-users {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.manage-users h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    background-color: #fdd;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.assign-subadmin-section, .view-subadmin-creators {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.assign-subadmin-section h3, .view-subadmin-creators h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content-creators-list {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-creators-list h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.creator-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.creator-checkbox:hover {
+    background-color: #e9f5ff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creator-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    transform: scale(1.2);
+    accent-color: #007bff;
+}
+
+.creator-checkbox span {
+    flex: 1;
+    color: #555;
+    font-size: 16px;
+}
+
+.creator-checkbox:focus-within {
+    outline: 2px solid #007bff;
+}
+
+@media (max-width: 600px) {
+    .content-creators-list {
+        padding: 10px;
+    }
+
+    .creator-checkbox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .creator-checkbox input[type="checkbox"] {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .creator-checkbox span {
+        font-size: 14px;
+    }
+}
+
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}

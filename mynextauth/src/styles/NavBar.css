@@ -1,0 +1,86 @@
+/* src/styles/NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0056b3; /* Modern blue */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px; /* Fixed height */
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:bg-gradient-to-r from-blue-200 to-purple-600;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logout-btn {
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c53030;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-top: 80px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: #f7fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.breadcrumbs a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #718096;
+}

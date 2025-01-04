@@ -1,0 +1,17 @@
+.study-materials {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e8f5e9;
+}
+.material-card {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.download-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+.download-link:hover {
+    color: #0056b3;
+}

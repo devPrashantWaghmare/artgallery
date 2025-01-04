@@ -1,0 +1,74 @@
+:root {
+  --primary-color: #3182ce;
+  --secondary-color: #2c5282;
+  --background-light: #f7fafc;
+  --background-dark: #2d3748;
+  --text-dark: #2d3748;
+  --text-light: #ffffff;
+  --border-color: #e2e8f0;
+  --highlight-color: #48bb78;
+}
+
+.subadminDashboardWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-light);
+  min-height: 100vh;
+}
+
+.subadminDashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.dashboardSidebar {
+  width: 250px;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+.dashboardSidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.dashboardSidebar button {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.dashboardSidebar button:hover {
+  background-color: var(--highlight-color);
+  transform: scale(1.05);
+}
+
+.dashboardContent {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--background-light);
+  overflow-y: auto;
+  border-left: 1px solid var(--border-color);
+}
+
+/* Remove scrolling if content fits */
+.subadminDashboardWrapper,
+.dashboardContent {
+  overflow: hidden;
+}

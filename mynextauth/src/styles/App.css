@@ -1,0 +1,95 @@
+/* App.css */
+
+/* Normalize or reset styles to ensure consistency across browsers */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a global font family */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7fafc; /* Light background color */
+    color: #333; /* Default text color */
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure the body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure all links have consistent styling */
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent element */
+}
+
+/* Set a basic layout for the main content area */
+main {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+}
+
+/* Prevent body elements from overlapping */
+html, body {
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Define some space between sections and ensure no overlapping */
+section {
+    margin: 2rem 0; /* Space around sections */
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility classes for spacing */
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+/* Set a default z-index management */
+body > * {
+    position: relative; /* Ensure components don't overlap */
+    z-index: 1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust navbar for small screens */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .user-section {
+        gap: 1rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+
+    .dashboard-sidebar {
+        width: 200px; /* Reduce sidebar width on smaller screens */
+    }
+}

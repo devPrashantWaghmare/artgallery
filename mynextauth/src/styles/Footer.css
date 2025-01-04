@@ -1,0 +1,30 @@
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    text-align: center;
+    clear: both;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links,
+  .footer-social {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a,
+  .footer-social a {
+    color: var(--text-light);
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-social a:hover {
+    color: #ffdd57;
+  }
+  

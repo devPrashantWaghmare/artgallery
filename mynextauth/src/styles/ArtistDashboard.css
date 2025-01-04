@@ -1,0 +1,151 @@
+/* Dashboard Container */
+.admin-dashboard {
+  margin-top: 70px; /* Prevent overlap with navbar */
+  display: flex;
+  height: calc(100vh - 120px); /* Full viewport height minus navbar */
+  background-color: #f4f5f7; /* Slightly off-white background for better contrast */
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.dashboard-sidebar {
+  width: 280px;
+  background-color: #1e293b; /* Darker sidebar for high contrast */
+  color: #f1f5f9; /* Soft white text */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.dashboard-sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #94a3b8; /* Subtle but visible header color */
+}
+
+.dashboard-sidebar button {
+  background-color: #334155; /* Dark gray-blue button for better visibility */
+  color: #f1f5f9; /* Light text for readability */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+
+.dashboard-sidebar button:hover {
+  background-color: #38bdf8; /* Vibrant blue for hover effect */
+  color: white;
+  transform: translateX(5px);
+}
+
+.dashboard-sidebar button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5); /* Focus ring */
+}
+
+/* Main Content Area */
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff; /* Clean white content background */
+  border-left: 1px solid #e2e8f0;
+  overflow-y: auto; /* Scrollable content */
+  color: black;
+}
+
+.dashboard-content h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #1e293b; /* Dark text for clear contrast */
+}
+
+.dashboard-content .profile-info,
+.dashboard-content .kyc-status {
+  background-color: #f9fafb; /* Very light gray for better separation */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-content .profile-info h3,
+.dashboard-content .kyc-status h3 {
+  font-size: 20px;
+  color: #0f172a; /* Very dark blue for headings */
+  margin-bottom: 10px;
+}
+
+.dashboard-content .profile-info p,
+.dashboard-content .kyc-status p {
+  font-size: 16px;
+  color: #475569; /* Medium gray-blue for better text visibility */
+}
+
+.dashboard-content .kyc-status p {
+  margin-top: 5px;
+}
+
+/* Buttons */
+.card-actions button {
+  background-color: #2563eb; /* Bright blue for better visibility */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-actions button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #0f172a; /* Very dark blue for headings */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #475569; /* Medium gray-blue for better readability */
+}
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+      display: none; /* Hide sidebar */
+  }
+  .dashboard-sidebar.mobile {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #f8f9fa;
+  }
+}

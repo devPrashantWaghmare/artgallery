@@ -1,0 +1,139 @@
+.uploadContent {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  color: black; /* Ensure text is black */
+}
+
+.uploadContent:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.uploadContent h2 {
+  text-align: center;
+  color: #333; /* Dark grey for heading */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444; /* Slightly lighter black for labels */
+  font-size: 1rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  color: black; /* Ensure text is black */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: #0070f3; /* Blue focus border */
+  outline: none;
+}
+
+.formGroup textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.formGroup input[type="file"] {
+  padding: 0.5rem;
+  border: 1px dashed #ccc;
+  background-color: #f7f7f7;
+  color: black;
+}
+
+.submitButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.progressBar {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+  height: 12px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #0070f3;
+  transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .uploadContent {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .formGroup label {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+  }
+
+  .progressBar {
+    margin-top: 1.5rem;
+  }
+  .categorySelect, .typeSelect {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+.option {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+}

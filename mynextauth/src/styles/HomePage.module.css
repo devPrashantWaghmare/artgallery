@@ -1,0 +1,25 @@
+.homePage {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .homePage__mainContent {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .homePage__contentSection {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  .homePage__authPageSection {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .homePage--withAuthPage {
+    margin-right: 20px;
+  }
+  

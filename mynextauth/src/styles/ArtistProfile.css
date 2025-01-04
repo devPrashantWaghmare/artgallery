@@ -1,0 +1,89 @@
+.manage-profile {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+.profile-section, .upload-artworks-section, .categories-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-info p, .kyc-docs ul, .categories-section form {
+    margin: 10px 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.kyc-docs ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.kyc-docs li {
+    font-size: 14px;
+    color: #555;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-upload {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #45a049;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

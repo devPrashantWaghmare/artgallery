@@ -1,0 +1,99 @@
+/* src/styles/Products.css */
+
+/* General section styling */
+.products {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title Styling */
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grid Layout for product cards */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem; /* Space between items */
+}
+
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    }
+}
+
+/* Product card styles */
+.product-card {
+    flex: 1 1 calc(33.33% - 1.5rem); /* 3 items per row */
+    max-width: calc(33.33% - 1.5rem); /* Ensures cards maintain 3 items per row */
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow around cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Product Title */
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Product Price */
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #4a5568; /* Subtle gray for price */
+}
+
+/* View Details Button */
+.view-details {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .products h2 {
+        font-size: 1.8rem; /* Slightly smaller title on mobile */
+    }
+
+    .product-card {
+        flex: 1 1 calc(50% - 1.5rem); /* 2 items per row on small screens */
+        max-width: calc(50% - 1.5rem); /* Ensures cards maintain 2 items per row */
+    }
+}

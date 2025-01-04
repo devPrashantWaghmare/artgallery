@@ -1,0 +1,231 @@
+/* Container Styling */
+/* frontend/src/styles/AuthPage.module.css */
+.authWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.authButton {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authButton:hover {
+  background-color: #005bb5;
+}
+
+.authContainer {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 2rem;
+  background: #ffffff; /* Clean white background */
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  z-index: 10;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+/* Header Styling */
+.authContainer h3 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 1.8rem; /* Larger heading for better visibility */
+  color: #333;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Input Group Styling */
+.inputGroup {
+  margin-bottom: 20px; /* Added more space between inputs */
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 6px; /* Spacing between label and input */
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; /* Rounded borders for a modern look */
+  font-size: 1rem;
+  background-color: #fafafa;
+  color: #333;
+  box-sizing: border-box; /* Ensures padding is inside the width */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.inputGroup input:focus {
+  border-color: #3498db; /* Blue border on focus */
+  background-color: #f1f1f1;
+}
+
+/* Submit Button Styling */
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitBtn:disabled {
+  background-color: #d0d0d0;
+  cursor: not-allowed;
+}
+
+.submitBtn:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05); /* Slight scale on hover for interaction */
+}
+
+/* Error and Success Messages Styling */
+.errorMessage {
+  color: #e74c3c;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.successMessage {
+  color: #2ecc71;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Auth Toggle Buttons */
+.authToggle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.authToggle button {
+  padding: 14px 28px;
+  border: none;
+  background-color: #f39c12;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.authToggle button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.authToggle button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05); /* Hover scale effect */
+}
+
+.authToggle button i {
+  margin-right: 8px;
+  font-size: 1.3rem; /* Icon size */
+}
+
+/* Toggle Link Styling */
+.toggleLink {
+  color: #007bff;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 12px; /* Space between toggle link and buttons */
+}
+
+.toggleLink:hover {
+  color: #0056b3;
+}
+
+/* Home Page Layout */
+.homePage {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePage__mainContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePage__contentSection {
+  flex: 3;
+  padding: 20px;
+}
+
+.homePage__authPageSection {
+  flex: 1;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+}
+
+.homePage--withAuthPage {
+  margin-right: 20px;
+}
+
+/* Artist Button */
+.artistButton {
+  padding: 14px 28px;
+  background-color: #ff6f61;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.artistButton:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+.artistButton:focus {
+  outline: none;
+  border: 2px solid #ff6f61;
+}
+
+/* General Body Styling */
+.body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Button Link Styling */
+.a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.a:hover {
+  color: #0056b3;
+}
