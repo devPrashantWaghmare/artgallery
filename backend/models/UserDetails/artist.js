@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const User = require('./baseUser');
+const mongoose = require("mongoose");
+const {User} = require("./baseUser");
 
 const artistSchema = new mongoose.Schema({
   bio: { type: String },
@@ -34,6 +34,7 @@ const artistSchema = new mongoose.Schema({
 });
 
 // Register the discriminator
-const Artist = User.discriminator('Artist', artistSchema);
+const Artist = User.discriminator("Artist", artistSchema);
+
 
 module.exports = Artist;

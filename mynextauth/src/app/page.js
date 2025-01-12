@@ -1,8 +1,16 @@
 //src/app/page.js
+
+'use client';
+import {React, useState } from 'react';
+
+import { SessionProvider } from "next-auth/react"
+
 import HomePage from "../components/Home/HomePage";
 
-export default function Home() {
+export default function Home({session}) {
   return (
-<HomePage />   
+    <SessionProvider session={session}> 
+<HomePage />  
+</SessionProvider> 
   );
 }

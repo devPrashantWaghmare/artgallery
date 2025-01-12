@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from '../../services/api';
-import { handleApiError } from '../../utils/errorHandler';  // Import the error handler
+import { handleApiError } from '../Error/errorHandler';  // Import the error handler
 import styles from '../../styles/UserManagement.module.css';
 
 const SubUsers = () => {

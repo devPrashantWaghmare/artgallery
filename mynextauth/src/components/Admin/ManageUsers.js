@@ -19,7 +19,7 @@ import {
   Alert,
 } from "@mui/material";
 import "../../styles/ManageUsers.css";
-import { handleApiError } from "../../utils/errorHandler";
+import { handleApiError } from "../Error/errorHandler";
 import UserDetailsBox from "./UserDetailsBox"; // Import the UserDetailsBox component
 
 const ManageUsers = () => {

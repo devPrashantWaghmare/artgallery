@@ -149,6 +149,7 @@ export default AuthOTP;
 
  */
 
+//src/components/Auth/AuthOTP.js
 
 'use client';
 
@@ -158,6 +159,7 @@ import axios from '../../services/api';
 import { useRouter } from 'next/navigation';
 import { signIn, useSession } from 'next-auth/react';
 import ErrorPage from '../Error/ErrorPage';
+import RedirectUserBasedOnRole from '../../utils/redirect';
 
 const AuthOTP = () => {
   const [loading, setLoading] = useState(false);
@@ -218,13 +220,17 @@ const AuthOTP = () => {
       });
 
       if (response?.error) {
+        setMessageHandler({ type: 'error', text: 'OTP verification failed.' });
+
         setError('OTP verification failed.');
         return;
       }
 
       // Redirect user based on role stored in the session
       const userRole = session?.user?.role || 'user';
-      router.push(userRole === 'admin' ? '/admin/dashboard' : '/dashboard');
+      RedirectUserBasedOnRole(router,userRole || "user");
+
+     // router.push(userRole === 'admin' ? '/admin/dashboard' : '/dashboard');
     } catch (error) {
       setError('OTP verification failed.');
     } finally {

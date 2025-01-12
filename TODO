@@ -1,252 +1,261 @@
-Here’s a **comprehensive checklist** to implement the modern artwork e-commerce website. It covers all phases of development, from ideation to deployment, based on the detailed case study provided. Each section has specific tasks to track your workflow effectively.
+Here’s a comprehensive checklist to implement the modern artwork ecommerce website. It covers all phases of development, from ideation to deployment, based on the detailed case study provided. Each section has specific tasks to track your workflow effectively.
 
----
 
-### **I. Planning and Research**
-- [ ] Define the primary audience (e.g., art collectors, casual buyers, interior designers).
-- [ ] Conduct competitive analysis (evaluate 3-5 top competitors).
-- [ ] Decide on the tech stack (Next.js, TailwindCSS, Radix UI, etc.).
-- [ ] Prepare a sitemap and user journey flow.
-- [ ] Gather high-quality images and descriptions of artworks.
 
----
+ I. Planning and Research
+Define the primary audience (e.g., art collectors, casual buyers, interior designers).
+Conduct competitive analysis (evaluate 35 top competitors).
+Decide on the tech stack (Next.js, TailwindCSS, Radix UI, etc.).
+Prepare a sitemap and user journey flow.
+Gather highquality images and descriptions of artworks.
 
-### **II. Design Phase**
-#### **A. Branding and Visual Identity**
-- [ ] Choose primary and secondary color schemes (e.g., earthy tones, muted pastels).
-- [ ] Create a logo and favicon.
-- [ ] Define typography (e.g., serif for elegance, sans-serif for minimalism).
+
+
+ II. Design Phase
+# A. Branding and Visual Identity
+Choose primary and secondary color schemes (e.g., earthy tones, muted pastels).
+Create a logo and favicon.
+Define typography (e.g., serif for elegance, sansserif for minimalism).
   
-#### **B. Website Layout**
-- [ ] Design wireframes for:
-  - [ ] Home Page
-  - [ ] Artwork Categories/Collection Page
-  - [ ] Artwork Detail Page
-  - [ ] Cart and Checkout Pages
-  - [ ] About and Contact Pages
-- [ ] Create responsive layouts (desktop, tablet, mobile).
+# B. Website Layout
+Design wireframes for:
+  Home Page
+  Artwork Categories/Collection Page
+  Artwork Detail Page
+  Cart and Checkout Pages
+  About and Contact Pages
+Create responsive layouts (desktop, tablet, mobile).
 
-#### **C. Creative Elements**
-- [ ] Create hero section visuals (e.g., an animated artwork carousel).
-- [ ] Design creative UI components:
-  - [ ] Floating product cards with shadows.
-  - [ ] Interactive filters (price range, artist, size).
-  - [ ] Hover effects (e.g., zoom-in on artwork thumbnails).
-- [ ] Add unique components:
-  - [ ] Virtual Gallery View
-  - [ ] Augmented Reality (AR) integration mockup (optional).
+# C. Creative Elements
+Create hero section visuals (e.g., an animated artwork carousel).
+Design creative UI components:
+  Floating product cards with shadows.
+  Interactive filters (price range, artist, size).
+  Hover effects (e.g., zoomin on artwork thumbnails).
+Add unique components:
+  Virtual Gallery View
+  Augmented Reality (AR) integration mockup (optional).
 
----
 
-### **III. Development Phase**
-#### **A. Core Setup**
-- [ ] Initialize the project with `npx create-next-app`.
-- [ ] Configure TailwindCSS for styling.
-- [ ] Install additional libraries (e.g., `@radix-ui`, `framer-motion`, `react-three-fiber`).
 
-#### **B. Implement Pages**
-- [ ] Develop the Home Page:
-  - [ ] Hero carousel with trending artwork.
-  - [ ] Featured artist of the month section.
-  - [ ] Dynamic categories with icons.
-- [ ] Build the Artwork Categories Page:
-  - [ ] Dynamic grid with filters and sort options.
-- [ ] Develop the Artwork Detail Page:
-  - [ ] Zoomable artwork image.
-  - [ ] Artist details section.
-  - [ ] Add-to-cart CTA button.
-  - [ ] "Try in your space" AR link.
-- [ ] Create the Cart and Checkout Pages:
-  - [ ] Interactive cart with quantity adjustment.
-  - [ ] Payment gateway integration (Stripe/PayPal).
-- [ ] Build Support Pages:
-  - [ ] About Us (mission, artist collaboration details).
-  - [ ] Contact Page (form + map integration).
+ III. Development Phase
+# A. Core Setup
+Initialize the project with `npx createnextapp`.
+Configure TailwindCSS for styling.
+Install additional libraries (e.g., `@radixui`, `framermotion`, `reactthreefiber`).
 
-#### **C. Backend and API Integration**
-- [ ] Set up a backend with serverless functions (e.g., Next.js API routes).
-- [ ] Connect to a database (e.g., MongoDB, Firebase).
-- [ ] Develop endpoints for:
-  - [ ] Artwork listing and search.
-  - [ ] User authentication.
-  - [ ] Order creation and payment processing.
-- [ ] Implement GraphQL for efficient data querying (optional).
+# B. Implement Pages
+Develop the Home Page:
+  Hero carousel with trending artwork.
+  Featured artist of the month section.
+  Dynamic categories with icons.
+Build the Artwork Categories Page:
+  Dynamic grid with filters and sort options.
+Develop the Artwork Detail Page:
+  Zoomable artwork image.
+  Artist details section.
+  Addtocart CTA button.
+  "Try in your space" AR link.
+Create the Cart and Checkout Pages:
+  Interactive cart with quantity adjustment.
+  Payment gateway integration (Stripe/PayPal).
+Build Support Pages:
+  About Us (mission, artist collaboration details).
+  Contact Page (form + map integration).
 
----
+# C. Backend and API Integration
+Set up a backend with serverless functions (e.g., Next.js API routes).
+Connect to a database (e.g., MongoDB, Firebase).
+Develop endpoints for:
+  Artwork listing and search.
+  User authentication.
+  Order creation and payment processing.
+Implement GraphQL for efficient data querying (optional).
 
-### **IV. Testing and Quality Assurance**
-#### **A. Functional Testing**
-- [ ] Test all navigation links and buttons.
-- [ ] Verify filtering and sorting mechanisms.
-- [ ] Check AR and Virtual Gallery integration.
-- [ ] Validate cart and checkout functionality.
 
-#### **B. Responsive Testing**
-- [ ] Test on various screen sizes (desktop, tablet, mobile).
-- [ ] Test cross-browser compatibility (Chrome, Safari, Firefox, Edge).
 
-#### **C. Performance Optimization**
-- [ ] Optimize images using `next/image`.
-- [ ] Implement lazy loading for artwork thumbnails.
-- [ ] Use `react-query` or `SWR` for data fetching.
+ IV. Testing and Quality Assurance
+# A. Functional Testing
+Test all navigation links and buttons.
+Verify filtering and sorting mechanisms.
+Check AR and Virtual Gallery integration.
+Validate cart and checkout functionality.
 
-#### **D. Accessibility**
-- [ ] Ensure keyboard navigability.
-- [ ] Add alt text to images.
-- [ ] Test for WCAG compliance using tools like Lighthouse.
+# B. Responsive Testing
+Test on various screen sizes (desktop, tablet, mobile).
+Test crossbrowser compatibility (Chrome, Safari, Firefox, Edge).
 
----
+# C. Performance Optimization
+Optimize images using `next/image`.
+Implement lazy loading for artwork thumbnails.
+Use `reactquery` or `SWR` for data fetching.
 
-### **V. Launch and Deployment**
-- [ ] Deploy to Vercel or Netlify.
-- [ ] Configure a custom domain.
-- [ ] Set up monitoring tools (e.g., Google Analytics, Hotjar).
+# D. Accessibility
+Ensure keyboard navigability.
+Add alt text to images.
+Test for WCAG compliance using tools like Lighthouse.
 
----
 
-### **VI. Marketing and Post-Launch**
-- [ ] Announce the launch via email campaigns.
-- [ ] Optimize for SEO (add metadata, keywords, alt texts).
-- [ ] Monitor performance and user feedback.
 
----
+ V. Launch and Deployment
+Deploy to Vercel or Netlify.
+Configure a custom domain.
+Set up monitoring tools (e.g., Google Analytics, Hotjar).
+
+
+
+ VI. Marketing and PostLaunch
+Announce the launch via email campaigns.
+Optimize for SEO (add metadata, keywords, alt texts).
+Monitor performance and user feedback.
+
+
 
 This checklist ensures you stay organized and track progress effectively. Let me know if you'd like help with any specific implementation steps!
 
 
-### Workflow Strategy for Implementing Role-Based Access Control (RBAC) with Optimized Performance and Security
+ Workflow Strategy for Implementing RoleBased Access Control (RBAC) with Optimized Performance and Security
 
-#### **High-Level Goals**
-1. **Minimize database queries**: Utilize caching (Redis) to reduce direct MongoDB queries.
-2. **Ensure security**: Safeguard sensitive data, particularly roles and permissions.
-3. **Maintain performance**: Ensure scalability to handle high concurrent user traffic efficiently.
+# HighLevel Goals
+1. Minimize database queries: Utilize caching (Redis) to reduce direct MongoDB queries.
+2. Ensure security: Safeguard sensitive data, particularly roles and permissions.
+3. Maintain performance: Ensure scalability to handle high concurrent user traffic efficiently.
 
----
 
-### **Stepwise Workflow**
 
----
+ Stepwise Workflow
 
-#### **Step 1: JWT Role Integration**
-- **Objective**: Store user roles securely in JWT for efficient session handling.
-- **Process**:
-  - On login:
+
+
+# Step 1: JWT Role Integration
+ Objective: Store user roles securely in JWT for efficient session handling.
+ Process:
+   On login:
     1. Authenticate the user.
     2. Query the database for the user's role and version (`userVersion` or `roleVersion`).
     3. Embed the role and version in the JWT payload.
-  - Use HTTP-only, secure cookies for storing the JWT token to minimize XSS risks.
+   Use HTTPonly, secure cookies for storing the JWT token to minimize XSS risks.
 
----
 
-#### **Step 2: Implement Redis Caching**
-- **Objective**: Reduce MongoDB load and enhance performance.
-- **Process**:
-  - On user login:
+
+# Step 2: Implement Redis Caching
+ Objective: Reduce MongoDB load and enhance performance.
+ Process:
+   On user login:
     1. Check Redis for the user's role and version.
     2. If found:
-        - Use the cached data.
+         Use the cached data.
     3. If not found:
-        - Query MongoDB for the role and version.
-        - Cache the result in Redis with a TTL (e.g., 1 hour).
-- **Redis Management**:
-  - Ensure Redis is configured with sufficient memory and eviction policies to handle high traffic.
+         Query MongoDB for the role and version.
+         Cache the result in Redis with a TTL (e.g., 1 hour).
+ Redis Management:
+   Ensure Redis is configured with sufficient memory and eviction policies to handle high traffic.
 
----
 
-#### **Step 3: Handle Role Updates Dynamically**
-- **Objective**: Ensure role updates are reflected promptly without requiring extensive re-queries.
-- **Process**:
-  - Maintain a `userVersion` or `roleVersion` field in MongoDB for each user.
-  - When roles are updated:
+
+# Step 3: Handle Role Updates Dynamically
+ Objective: Ensure role updates are reflected promptly without requiring extensive requeries.
+ Process:
+   Maintain a `userVersion` or `roleVersion` field in MongoDB for each user.
+   When roles are updated:
     1. Increment the version in MongoDB.
     2. Invalidate Redis cache for the user.
-    3. Prompt re-login or force session refresh for the user to obtain the updated role.
+    3. Prompt relogin or force session refresh for the user to obtain the updated role.
 
----
 
-#### **Step 4: Middleware for RBAC Enforcement**
-- **Objective**: Decentralize role validation using middleware.
-- **Process**:
-  - Decode JWT from the user session.
-  - Verify the role and version:
+
+# Step 4: Middleware for RBAC Enforcement
+ Objective: Decentralize role validation using middleware.
+ Process:
+   Decode JWT from the user session.
+   Verify the role and version:
     1. Compare JWT `role` with the required role for the requested route.
     2. Check the `userVersion` from JWT against the cached version in Redis.
-  - If mismatched:
-    - Query MongoDB for the latest role and version.
-    - Update the session or deny access.
+   If mismatched:
+     Query MongoDB for the latest role and version.
+     Update the session or deny access.
 
----
 
-#### **Step 5: Scheduled Role Synchronization**
-- **Objective**: Ensure consistency between Redis and MongoDB.
-- **Process**:
-  - Periodically run a background task to:
+
+# Step 5: Scheduled Role Synchronization
+ Objective: Ensure consistency between Redis and MongoDB.
+ Process:
+   Periodically run a background task to:
     1. Fetch all active users from MongoDB.
     2. Sync role data in Redis for users whose TTLs have expired or are about to expire.
-- **Tools**:
-  - Use a task scheduler (e.g., `node-cron`, `bull`) for efficient syncing.
+ Tools:
+   Use a task scheduler (e.g., `nodecron`, `bull`) for efficient syncing.
 
----
 
-#### **Step 6: Secure JWT Storage and Rotation**
-- **Objective**: Prevent token theft and ensure long-term security.
-- **Process**:
-  - Use secure, HTTP-only cookies for storing JWTs.
-  - Rotate tokens periodically:
+
+# Step 6: Secure JWT Storage and Rotation
+ Objective: Prevent token theft and ensure longterm security.
+ Process:
+   Use secure, HTTPonly cookies for storing JWTs.
+   Rotate tokens periodically:
     1. Issue new tokens at regular intervals.
     2. Revalidate roles and versions during token rotation.
 
----
 
-#### **Step 7: Fine-Grained Access Control**
-- **Objective**: Implement permission-based access for detailed control.
-- **Process**:
-  - Extend roles with granular permissions (e.g., `CREATE_PAINTING`, `VIEW_USERS`).
-  - Store permissions in MongoDB or Redis.
-  - Embed critical permissions in JWT payloads when necessary for quick access.
-  - Validate permissions in middleware before granting access to sensitive resources.
 
----
+# Step 7: FineGrained Access Control
+ Objective: Implement permissionbased access for detailed control.
+ Process:
+   Extend roles with granular permissions (e.g., `CREATE_PAINTING`, `VIEW_USERS`).
+   Store permissions in MongoDB or Redis.
+   Embed critical permissions in JWT payloads when necessary for quick access.
+   Validate permissions in middleware before granting access to sensitive resources.
 
-#### **Step 8: Audit Logging**
-- **Objective**: Monitor role changes and critical actions for debugging and compliance.
-- **Process**:
-  - Maintain a dedicated MongoDB collection for logging:
+
+
+# Step 8: Audit Logging
+ Objective: Monitor role changes and critical actions for debugging and compliance.
+ Process:
+   Maintain a dedicated MongoDB collection for logging:
     1. Log changes to roles or permissions.
-    2. Record details like action type, user ID, timestamp, and performed-by (e.g., `superadmin`).
-  - Use logs for analysis and security audits.
+    2. Record details like action type, user ID, timestamp, and performedby (e.g., `superadmin`).
+   Use logs for analysis and security audits.
 
----
 
-### **Key Flow Diagrams**
 
-1. **Login Workflow**:
-   - **Trigger**: User logs in.
-   - **Actions**:
+ Key Flow Diagrams
+
+1. Login Workflow:
+    Trigger: User logs in.
+    Actions:
      1. Authenticate user credentials.
      2. Check Redis for role/version:
-        - If present → Use cached data.
-        - If absent → Query MongoDB → Cache in Redis → Generate JWT.
+         If present → Use cached data.
+         If absent → Query MongoDB → Cache in Redis → Generate JWT.
      3. Send JWT to the user in a secure cookie.
 
-2. **Request Workflow**:
-   - **Trigger**: User makes a request to a protected route.
-   - **Actions**:
+2. Request Workflow:
+    Trigger: User makes a request to a protected route.
+    Actions:
      1. Decode JWT in middleware.
      2. Verify role and version:
-        - Match → Grant access.
-        - Mismatch → Query database or deny access.
+         Match → Grant access.
+         Mismatch → Query database or deny access.
 
-3. **Role Update Workflow**:
-   - **Trigger**: Admin changes a user's role.
-   - **Actions**:
+3. Role Update Workflow:
+    Trigger: Admin changes a user's role.
+    Actions:
      1. Increment the `roleVersion` in MongoDB.
      2. Invalidate Redis cache for the affected user.
-     3. Prompt session refresh or re-login.
+     3. Prompt session refresh or relogin.
 
----
 
-### **Benefits of Workflow**
-- **Performance**: Caching reduces MongoDB queries, improving scalability.
-- **Security**: Secure JWT handling and version control ensure robust protection.
-- **Consistency**: Scheduled synchronization maintains data integrity across systems.
+
+ Benefits of Workflow
+ Performance: Caching reduces MongoDB queries, improving scalability.
+ Security: Secure JWT handling and version control ensure robust protection.
+ Consistency: Scheduled synchronization maintains data integrity across systems.
+
+a. Add unit tests for RedirectUserBasedOnRole and session management logic.
+ Implement unit tests for handleSignIn and renderProvidersLogin for robust validation.
+
+
+in google cloud console:
+Authorized redirect URI
+http://localhost:3000/api/auth/callback/google
+

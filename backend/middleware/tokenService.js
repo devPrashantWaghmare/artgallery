@@ -1,3 +1,4 @@
+// backend/middleware/tokenService.js
 const jwt = require('jsonwebtoken');
 
 /**
@@ -7,7 +8,7 @@ const jwt = require('jsonwebtoken');
  * @param {string} [expiresIn='1h'] - Token expiration time.
  * @returns {string} - The signed JWT token.
  */
-const generateToken = (payload, secret = process.env.JWT_SECRET || 'default_secret', expiresIn = '1h') => {
+const generateToken = (payload, secret = process.env.JWT_SECRET, expiresIn = '1h') => {
   return jwt.sign(payload, secret, { expiresIn });
 };
 

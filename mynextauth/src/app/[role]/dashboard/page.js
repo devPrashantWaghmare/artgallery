@@ -24,7 +24,7 @@ const RoleDashboard = ({ params }) => {
 export default RoleDashboard;
  */
 
-'use client';
+/* 'use client';
 
 import { useEffect, useState } from 'react';
 import Dashboard from '../../../components/Common/Dashboard';
@@ -48,6 +48,84 @@ const RoleDashboard = ({ params }) => {
   }
 
   return <Dashboard role={capitalizedRole} />;
+};
+
+export default RoleDashboard; */
+
+
+// 'use client';
+
+// import Dashboard from '../../../components/Common/Dashboard';
+// import { useSession } from 'next-auth/react';
+// import { useRouter } from 'next/navigation';
+// import { useState, useEffect } from 'react';
+
+// const RoleDashboard = ({ params: asyncParams }) => {
+//   const { data: session, status } = useSession();
+//   const router = useRouter();
+//   const [role, setRole] = useState(null);
+
+//   // Unwrap params and set the role state
+//   useEffect(() => {
+//     asyncParams.role
+//       .then(setRole)
+//       .catch(() => {
+//         router.push('/auth/login');
+//       });
+//   }, [asyncParams, router]);
+
+//   // Handle redirection when session or role is loaded
+//   useEffect(() => {
+//     if (status === 'authenticated' && session && role) {
+//       if (session.user.role !== role) {
+//         router.push(`/${session.user.role}/dashboard`);
+//       }
+//     }
+//   }, [status, session, role, router]);
+
+//   // Loading states
+//   if (status === 'loading' || !role) {
+//     return <div>Loading...</div>;
+//   }
+
+//   // Render the dashboard only if everything is valid
+//   return <Dashboard role={role} permissions={session?.user?.permissions || {}} />;
+// };
+
+// export default RoleDashboard;
+
+'use client';
+
+import Dashboard from '../../../components/Common/Dashboard';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { use } from 'react'; // Importing use hook for unwrapping promises
+
+const RoleDashboard = ({ params: asyncParams }) => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  
+  // Use the `use` hook to unwrap the promise directly
+  const params = use(asyncParams); 
+  const role = params?.role; // Now `params` is resolved and can be accessed safely
+
+  // Handle redirection when session or role is loaded
+  useEffect(() => {
+    if (status === 'authenticated' && session && role) {
+      if (session.user.role !== role) {
+        router.push(`/${session.user.role}/dashboard`);
+      }
+    }
+  }, [status, session, role, router]);
+
+  // Loading states
+  if (status === 'loading' || !role) {
+    return <div>Loading...</div>;
+  }
+
+  // Render the dashboard only if everything is valid
+  return <Dashboard role={role} permissions={session?.user?.permissions || {}} />;
 };
 
 export default RoleDashboard;

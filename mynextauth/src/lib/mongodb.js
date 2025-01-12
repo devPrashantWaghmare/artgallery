@@ -1,4 +1,7 @@
+
+
 import { MongoClient } from 'mongodb';
+
 
 // Environment variables
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -27,12 +30,7 @@ export async function dbConnect() {
     }
 
     try {
-        const client = new MongoClient(MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-
-        await client.connect();
+        const client = await new MongoClient(MONGODB_URI).connect();
         const db = client.db(MONGODB_DB);
 
         // Cache the client and database

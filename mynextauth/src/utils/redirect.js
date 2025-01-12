@@ -1,5 +1,5 @@
 // src/utils/redirect.js
-const RedirectUserBasedOnRole = (router, role) => {
+const RedirectUserBasedOnRole = (router, role ="User") => {
   console.log("in redirect : role: ",role);
   console.log("in redirect, router: ",router);
   const roleRoutes = {
@@ -10,7 +10,7 @@ const RedirectUserBasedOnRole = (router, role) => {
       User: '/user/dashboard',
   };
 
-  router.push(roleRoutes[role] || "/user/dashboard");
+  router.push(roleRoutes[role] || roleRoutes.User);
 };
 
 export default RedirectUserBasedOnRole;
