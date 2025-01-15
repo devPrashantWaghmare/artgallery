@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import KYCComponent from "./KYCComponent";
 
-const ManageProfile = ({ profileData, verificationStatus, isAdmin = false }) => {
+const ManageProfile = ({ profileData, verificationStatus}) => {
   const [isKycOpen, setIsKycOpen] = useState(true);
   const [isSampleArtworksOpen, setIsSampleArtworksOpen] = useState(false);
   const [isNormalArtworksOpen, setIsNormalArtworksOpen] = useState(false);
@@ -23,9 +23,9 @@ const ManageProfile = ({ profileData, verificationStatus, isAdmin = false }) => 
       variant="outlined"
       sx={{ padding: 3, margin: "20px auto", maxWidth: 800 }}
     >
-      <Typography variant="h4" gutterBottom>
+      {/* <Typography variant="h4" gutterBottom>
         Welcome to {username}'s Dashboard
-      </Typography>
+      </Typography> */}
 
       {/* KYC Steps Section */}
       <Card variant="outlined" sx={{ marginBottom: 3 }}>
@@ -122,7 +122,6 @@ const ManageProfile = ({ profileData, verificationStatus, isAdmin = false }) => 
             <UploadNormalArtworks
               baseDirectory={`artist/artworks/${profileData.name}`}
               username={profileData.name}
-              isAdmin={isAdmin}
               isOnboarded={verificationStatus?.onboarded || false}
             />
           </Collapse>

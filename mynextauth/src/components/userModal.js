@@ -1,3 +1,5 @@
+//src/components/userModal.js
+
 "client";
 
 import React, { useState, useEffect } from "react";
@@ -21,7 +23,8 @@ const UserModal = () => {
         {session?.user?.image ? (
           <img
             src={session.user.image}
-            alt={session.user.name}
+            alt={session?.user?.name || "User"}
+
             className="w-8 h-8 rounded-full"
           />
         ) : (
@@ -50,7 +53,7 @@ const UserModal = () => {
                   <p className="text-sm text-gray-500">{session.user.email}</p>
                   {session.user.role && (
                     <p className="text-xs text-gray-400">
-                      Role:{session.user.role}{" "}
+                       Role: {session?.user?.role || "User"}
                     </p>
                   )}
                 </div>

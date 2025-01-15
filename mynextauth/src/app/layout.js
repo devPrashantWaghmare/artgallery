@@ -23,13 +23,13 @@ import { SessionProvider } from "next-auth/react";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <SessionProvider>
           <Header />
-          <main className="mx-auto w-full max-w-3xl flex-auto px-4 py-4 sm:px-6 md:py-6">
-            {children}
+          <main className="flex flex-col items-center justify-center px-6 py-6 min-h-screen bg-gray-50">
+            <div className="w-full max-w-7xl flex-auto bg-white rounded-lg shadow-md p-6 sm:p-8 md:p-10">
+              {children}
+            </div>
           </main>
           <Footer />
         </SessionProvider>
@@ -37,3 +37,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+

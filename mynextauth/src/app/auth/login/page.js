@@ -195,20 +195,20 @@ import ErrorBoundary from "../../../components/Error/ErrorBoundry";
 
 export default function LoginPage() {
   const [providers, setProviders] = useState([]);
-  const { data: session, status } = useSession(); // Added status for loading check
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
     getProviders()
-      .then((res) => setProviders(Object.values(res || {})))
+      .then((res) => setProviders(Object.values(res || [])))
       .catch((error) => console.error("Failed to fetch providers:", error));
   }, []);
 
   useEffect(() => {
-    if (status === "loading") return; // Wait until session loading completes
+    if (status === "loading") return; 
     if (session) {
-      const role = session.user.role || "User"; // Safely access role
-      RedirectUserBasedOnRole(router, role);
+      const role = session?.user?.role || "User"; 
+      RedirectUserBasedOnRole(router, role); // Pass role
     }
   }, [session, status, router]);
 
@@ -227,4 +227,3 @@ export default function LoginPage() {
     </div>
   );
 }
-

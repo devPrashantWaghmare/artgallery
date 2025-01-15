@@ -8,5 +8,5 @@
 //   }
 import Dashboard from "../components/Common/Dashboard";
 export default function UserLayout({ children }) {
-    return <Dashboard role="user">{children}</Dashboard>;
+    return <Dashboard role="User">{children}</Dashboard>;
 }

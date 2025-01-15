@@ -5,10 +5,10 @@ const {  Artist } = require('../models/UserDetails/artist');
 
 const Product = require('../models/productDetails/ArtProduct');
 const Role = require('../models/UserDetails/role');
-const { protect, verifySubadmin, verifyToken } = require('../middleware/authMiddleware');
+const { protect} = require('../middleware/authMiddleware');
 
 // Get all content creators and their products for the logged-in subadmin
-router.get('/creators-and-products', protect, verifyToken, verifySubadmin, async (req, res) => {
+router.get('/creators-and-products', protect,  async (req, res) => {
     try {
         const subadminId = req.user._id;
 

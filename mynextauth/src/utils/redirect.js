@@ -1,7 +1,11 @@
 // src/utils/redirect.js
+'use client'
+
+
 const RedirectUserBasedOnRole = (router, role ="User") => {
+
   console.log("in redirect : role: ",role);
-  console.log("in redirect, router: ",router);
+
   const roleRoutes = {
       SuperAdmin: '/superadmin/dashboard',
       Admin: '/admin/dashboard',

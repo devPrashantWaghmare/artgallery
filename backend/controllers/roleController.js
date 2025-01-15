@@ -4,10 +4,10 @@ const router = express.Router();
 const {User} = require('../models/UserDetails/baseUser');
 const Role = require('../models/UserDetails/role')
 const Product = require('../models/productDetails/ArtProduct');
-const { protect, isAdmin,verifyToken ,verifyRole} = require('../middleware/authMiddleware');
+const { protect, verifyToken ,verifyRole} = require('../middleware/authMiddleware');
 
 // Get all users with optional role filtering
-router.get('/filter', protect, isAdmin, async (req, res) => {
+router.get('/filter', protect, async (req, res) => {
     const { role } = req.query;
 
     try {
@@ -32,7 +32,7 @@ router.get('/filter', protect, isAdmin, async (req, res) => {
 });
 
 // Get all users (without any filters)
-router.get('/', protect, isAdmin, async (req, res) => {
+router.get('/', protect,  async (req, res) => {
     try {
         const users = await User.find({}, 'name email role permissions').populate('role', 'name permissions');;
         res.status(200).json(users);
@@ -42,18 +42,20 @@ router.get('/', protect, isAdmin, async (req, res) => {
     }
 });
 // GET /api/admin/roles/getRoles
-router.get("/getRoles",protect, verifyToken,verifyRole(["admin"]), async (req, res) => {
+router.get("/getRoles", protect, async (req, res) => {
     try {
-      const roles = await Role.find({});
-      res.status(200).json(roles);
+      // Fetch all roles including inherited role details (if applicable)
+      const roles = await Role.find({}).populate("inherits", "name permissions"); // Populating 'inherits' with 'name' and 'permissions'
+      res.status(200).json({ success: true, data: roles });
     } catch (error) {
-      console.error("in getRoles Error fetching roles:", error);
-      res.status(500).json({ message: "Failed to fetch roles" });
+      console.error("Error fetching roles:", error);
+      res.status(500).json({ success: false, message: "Failed to fetch roles" });
     }
   });
+  
 
 // Assign a subadmin to manage artist
-router.post('/assign-subadmin', protect, isAdmin, async (req, res) => {
+router.post('/assign-subadmin', protect, async (req, res) => {
     const { subadminId, contentCreatorIds } = req.body;
 
     try {
@@ -92,7 +94,7 @@ router.post('/assign-subadmin', protect, isAdmin, async (req, res) => {
 
 
 // Get all artist managed by a specific subadmin
-router.get('/subadmin-creators/:subadminId', protect, isAdmin, async (req, res) => {
+router.get('/subadmin-creators/:subadminId', protect, async (req, res) => {
     const { subadminId } = req.params;
 
     try {

@@ -19,7 +19,7 @@ const createSuperAdmin = async () => {
       return;
     }
 
-    const hashedPassword = await bcrypt.hash(process.env.SUPER_ADMIN_PASSWORD || 'defaultSecurePassword', 10);
+    const hashedPassword = await bcrypt.hash(process.env.SUPER_ADMIN_PASSWORD || 'superadmin', 10);
 
     const superAdmin = new User({
       name: process.env.SUPER_ADMIN_NAME || 'Master Admin',
@@ -27,7 +27,7 @@ const createSuperAdmin = async () => {
       mobile: process.env.SUPER_ADMIN_MOBILE || '1234567890',
       password: hashedPassword,
       role: superAdminRole._id,
-      isAdmin: true,
+      userVersion: 1,
       createdBy: null, // System-created
     });
 
@@ -37,7 +37,7 @@ const createSuperAdmin = async () => {
       userId: savedUser._id,
       role: superAdminRole._id,
       permissions: superAdminRole.permissions,
-      version: 1,
+      userVersion: 1,
     });
     await cacheEntry.save();
 

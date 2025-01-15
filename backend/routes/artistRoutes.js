@@ -1,6 +1,6 @@
 // const express = require('express');
 // const router = express.Router();
-// const { protect, isAdmin,verifyToken, verifyRole } = require('../middleware/authMiddleware');
+// const { protect,verifyToken, verifyRole } = require('../middleware/authMiddleware');
 // const {
 //   getAllProducts,
 //   createProduct,
@@ -12,7 +12,7 @@
 // } = require('../controllers/artistController');
 
 // // Route to get all products (open for admins)
-// router.get('/products', protect,verifyToken, isAdmin, getAllProducts);
+// router.get('/products', protect,verifyToken, getAllProducts);
 // console.log(getAllProducts);
 
 // // Route to create a product (only for authenticated artist users)
@@ -50,20 +50,20 @@ const {
   getArtistProducts,
   getArtistProfile,
 } = require("../controllers/artistController");
-const { protect, verifyRole } = require("../middleware/authMiddleware");
+const { protect } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 // Admin access for artist review
-router.get("/artists-review", protect, verifyRole(["admin"]), getArtistsForReview);
-router.put("/artwork-review/:artworkId", protect, verifyRole(["admin"]), updateArtworkReviewStatus);
+router.get("/artists-review", protect, getArtistsForReview);
+router.put("/artwork-review/:artworkId", protect, updateArtworkReviewStatus);
 
 // Artist-specific routes
-router.get("/products", protect, verifyRole(["admin"]), getAllProducts);
-router.post("/products", protect, verifyRole(["artist"]), createProduct);
-router.put("/products/:id", protect, verifyRole(["artist"]), updateProduct);
-router.delete("/products/:id", protect, verifyRole(["artist"]), deleteProduct);
+router.get("/products", protect,getAllProducts);
+router.post("/products", protect, createProduct);
+router.put("/products/:id", protect, updateProduct);
+router.delete("/products/:id", protect, deleteProduct);
 router.get("/products/:id", protect, getProductById);
-router.get("/products", protect, verifyRole(["artist"]), getArtistProducts);
-router.get("/profile", protect, verifyRole(["artist"]), getArtistProfile);
+router.get("/products", protect, getArtistProducts);
+router.get("/profile", protect, getArtistProfile);
 
 module.exports = router;

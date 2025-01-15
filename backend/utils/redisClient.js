@@ -1,20 +1,17 @@
+// backend/utils/redisClient.js
+
 const Redis = require("ioredis");
 
 let redisClient;
 
-
-
 // Initialize Redis Client
 const initializeRedisClient = () => {
   if (!redisClient) {
-    redisClient = new Redis({
-      host: "127.0.0.1",
-      port: 6379,
-    });
+    redisClient = new Redis();
 
-    // Error handling
+    // Event listeners for Redis
     redisClient.on("error", (err) => {
-      console.error("Redis Client Error:", err.message);
+      console.error("❌ Error Connecting to Redis Server: ", err);
     });
 
     redisClient.on("connect", () => {
@@ -34,25 +31,30 @@ const initializeRedisClient = () => {
 
 // Function to connect to Redis
 const connectRedis = async () => {
-  if (redisClient && redisClient.status === "ready") {
-    console.log("ℹ️ Redis is already connected.");
-    return redisClient;
-  } else if (redisClient && redisClient.status === "connecting") {
-    console.log("ℹ️ Redis is already connecting.");
-    return redisClient;
-  } else {
-    try {
-      const client = initializeRedisClient();
-      await client.connect();
-      console.log("✅ Connected to Redis.");
-      return client;
-    } catch (error) {
-      console.error("❌ Failed to connect to Redis:", error.message);
-      throw error;
+  if (redisClient) {
+    if (redisClient.status === "ready") {
+      console.log("ℹ️ Redis is already connected.");
+      return redisClient;
+    } else if (redisClient.status === "connecting") {
+      console.log("ℹ️ Redis is already connecting.");
+      return redisClient;
     }
   }
-};
 
+  try {
+    const client = initializeRedisClient();
+    console.log("ℹ️ Attempting to connect to Redis...");
+    await new Promise((resolve, reject) => {
+      client.once("ready", resolve);
+      client.once("error", reject);
+    });
+    console.log("✅ Connected to Redis.");
+    return client;
+  } catch (error) {
+    console.error("❌ Failed to connect to Redis:", error.message);
+    throw error;
+  }
+};
 
 // Function to disconnect from Redis
 const disconnectRedis = async () => {
@@ -67,7 +69,7 @@ const disconnectRedis = async () => {
     console.error("❌ Failed to disconnect from Redis:", error.message);
   }
 };
-
+// in backend/utils/redisClient.js
 // Function to cache user data
 const cacheUserData = async (key, data, ttl = 3600) => {
   try {
@@ -82,7 +84,7 @@ const cacheUserData = async (key, data, ttl = 3600) => {
 // Function to retrieve user data from cache
 const getUserFromCache = async (key) => {
   try {
-  console.log("getUserFromCache : key recieved",key);
+    console.log("getUserFromCache : key received", key);
     const cachedData = await redisClient.get(key);
     if (cachedData) {
       console.log(`✅ Data retrieved from cache for key: ${key}`);

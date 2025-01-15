@@ -1,58 +1,92 @@
 // src/pages/api/auth/[...nextauth].js
 
+// src/app/api/auth/[...nextauth]/route.js
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import axios from "../../../../services/api";
+import apiClient from "../../../../services/apiClient"; // Axios setup
+import { refreshAccessToken } from "../../../../utils/refreshTokenUtil";
 
+// Helper function to check if the access token has expired
+function checkIfTokenExpired(accessToken) {
+  if (!accessToken) return true;
+  const decodedToken = JSON.parse(Buffer.from(accessToken.split(".")[1], 'base64').toString('utf-8'));
+  return decodedToken.exp * 1000 < Date.now(); // Compare expiry time with current time
+}
+// NextAuth configuration
 const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       httpOptions: {
-        timeout: 10000, // Increase to 10 seconds
+        timeout: 10000, // Increase timeout for slow responses
       },
     }),
   ],
   callbacks: {
-    async jwt({ token, account, profile }) {
-      // If it's the first time the user is logging in, store the user's role
-      if (account && profile) {
+    // JWT callback to manage tokens
+    async jwt({ token, account }) {
+      if (account?.provider && account.id_token) {
+        // Social login flow
         try {
-          // Send the token to your backend to fetch user details
-          const response = await axios.post("/api/auth/social-login", {
-            token: account.id_token, // Pass the social login token (from Google)
-            provider: "google", // Specify the provider (google)
+          const response = await apiClient.post("/api/social-Auth/social-login", {
+            skipAuth: true,
+            token: account.id_token,
+            provider: account.provider,
           });
 
-          const user = response.data.user;
+          const { token: customToken, refreshToken, user: socialUser } = response.data;
 
-          // Add the user role to the JWT token
-          token.role = user.role || "User"; // Default to "User" if no role is found
-          token.permissions = user.permissions || {}; // Ensure permissions are always set
-          token.route = user.route || "/"; // Default route if not provided
+          // Store tokens and user details
+          token.accessToken = customToken || "";
+          token.refreshToken = refreshToken || "";
+          token.id = socialUser.id;
+          token.role = socialUser?.role || "User";
+          token.permissions = socialUser?.permissions || {};
+          token.route = socialUser?.route || "/";
         } catch (error) {
-          console.error("Error in JWT callback during social login:", error);
-          // Fallback to default token in case of error
+          console.error(
+            "Error during social login:",
+            error.response?.data?.message || error.message
+          );
+          // Fallback values in case of an error
           token.role = "User";
           token.permissions = {};
           token.route = "/";
+          token.accessToken = "";
         }
       }
 
+      // Handle token expiration
+      const isExpired = checkIfTokenExpired(token.accessToken);
+      if (isExpired && token.refreshToken) {
+        const newAccessToken = await refreshAccessToken(token.refreshToken);
+        if (newAccessToken) {
+          token.accessToken = newAccessToken;
+        } else {
+          console.error("Failed to refresh access token. User might need to log in again.");
+        }
+      }
       return token;
     },
+
+    // Session callback to pass data to the client
     async session({ session, token }) {
-      // Add the role and permissions from the token to the session object
+      session.user.id = token.id;
       session.user.role = token.role;
-      session.user.permissions = token.permissions || {}; // Ensure permissions are set
-      session.user.route = token.route; // Optional: Store user-specific route
+      session.user.permissions = token.permissions;
+      session.user.route = token.route;
+      session.accessToken = token.accessToken; // Include access token in session
+      session.refreshToken = token.refreshToken; // Include refresh token in session
       return session;
     },
   },
   session: {
-    strategy: "jwt", // Use JWT tokens to store session data
+    strategy: "jwt", // Use JWT-based sessions
+    maxAge: 24 * 60 * 60, // Tokens valid for 1 day
   },
 };
-export const GET = NextAuth(authOptions);
-export const POST = NextAuth(authOptions);
+
+// Export the handler for Next.js API routes
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };

@@ -1,4 +1,4 @@
-/* /* 'use client';
+/*  'use client';
 //frontend/src/components/Common/Dashboard.js
 import React, { useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
@@ -48,9 +48,10 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
- */
-/* 
+export default Dashboard; */
+
+
+
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -63,6 +64,8 @@ import Sidebar from './Sidebar';
 const Dashboard = () => {
   const { data: session } = useSession();
   const [userData, setUserData] = useState(null);
+  const [selectedSection, setSelectedSection] = useState('');
+
 
   useEffect(() => {
     if (session) {
@@ -90,7 +93,7 @@ const Dashboard = () => {
     );
   }
 
-  const role = userData.role || 'user';
+  const role = userData.role || 'User';
   const renderContent = () => {
     if (!selectedSection) {
       return <div>Welcome to the {role.charAt(0).toUpperCase() + role.slice(1)} Dashboard</div>;
@@ -117,7 +120,7 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
- */
+
 /* 
 'use client';
 
@@ -188,6 +191,7 @@ export default Dashboard;
 
 
  */
+/* 
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -221,7 +225,7 @@ const Dashboard = () => {
       </div>
     );
   }
-
+console.log("In Dashboard : userData: ",userData);
   const renderContent = () => {
     return <div>Welcome to the {userData.role} Dashboard</div>;
   };
@@ -243,3 +247,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+ */

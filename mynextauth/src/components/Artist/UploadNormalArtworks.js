@@ -5,7 +5,6 @@ import styles from "../../styles/UploadContent.module.css";
 const UploadNormalArtworks = ({
   baseDirectory = "",
   username,
-  isAdmin = false,
   isOnboarded = false,
 }) => {
   console.log("in UpoloadNormalArtworks - baseDirecotry,username: ",baseDirectory,username);
@@ -128,7 +127,7 @@ const UploadNormalArtworks = ({
   return (
     <div className={styles.uploadContent}>
       <h2>Upload Normal Artwork</h2>
-      {!isOnboarded && !isAdmin && (
+      {!isOnboarded && (
         <p style={{ color: "red" }}>
           Note: You are not verified yet. This feature is available for
           onboarded artists only.

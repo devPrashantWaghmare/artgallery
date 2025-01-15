@@ -1,18 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const {
-    createUser,
-    getUserProfile,
-    getUserDetails,
-    getRecommendations,
-    getNotifications,
-} = require('../controllers/userController');
-const { protect, isAdmin } = require('../middleware/authMiddleware');
+const userController = require('../controllers/userController');
+const adminController = require('../controllers/adminController');
+const { protect } = require('../middleware/authMiddleware');
 
-router.post('/create', protect, isAdmin, createUser); // Only admin can create users
-router.get('/profile', protect, getUserProfile); // Authenticated users
-router.get('/details/:userId', protect, isAdmin, getUserDetails); // Admin view user details
-router.get('/recommendations', protect, getRecommendations); // Normal users
-router.get('/notifications', protect, getNotifications); // Authenticated users
+// User-related routes
+router.get('/profile', protect, userController.getUserProfile); // Authenticated user profile
+router.get('/details/:userId', protect, userController.getUserDetails); // Admin view user details
+router.get('/recommendations', protect, userController.getRecommendations); // Recommendations for normal users
+router.get('/notifications', protect, userController.getNotifications); // Authenticated user notifications
+router.get('/getUsers', protect, userController.getUsers); // Get all users
+
+// Admin-related routes
+router.post('/create', protect, adminController.createUser); // Create user (admin only)
+router.put('/users/:id', protect, adminController.updateUser); // Update user details
+router.delete('/users/:id', protect, adminController.deleteUser); // Delete user
+router.get('/users/details/:id', protect, adminController.viewUserDetails); // Admin-specific user details
 
 module.exports = router;

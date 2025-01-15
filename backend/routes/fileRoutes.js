@@ -19,7 +19,7 @@
 // routes/fileRoutes.js
 const express = require("express");
 const fileController = require("../controllers/fileController");
-const { protect, verifyRole } = require("../middleware/authMiddleware");
+const { protect } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 // File operations

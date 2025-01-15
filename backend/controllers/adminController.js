@@ -5,19 +5,7 @@ const Product = require('../models/productDetails/ArtProduct');
 const Transaction = require('../models/transactions/Transaction');
 const Role = require('../models/UserDetails/role'); // Import Role model
 
-// Get all users
-const getUsers = async (req, res, next) => {
-  try {
-    console.log("Fetching all users...");
-    const users = await User.find().populate("role"); // Retrieve all users and populate their roles
-    res.status(200).json({
-      success: true,
-      data: users,
-    });
-  } catch (error) {
-    next(error); // Pass the error to the error handler middleware
-  }
-};
+
 // .get(`/api/admin/users/${userId}`,
 const viewUserDetails = async (req, res, next) => {
   try {
@@ -114,7 +102,7 @@ const createAdmin = async () => {
       name: process.env.ADMIN_USERNAME,
       email: process.env.ADMIN_EMAIL,
       password: hashedPassword,
-      isAdmin: true,
+      
     };
 
     const admin = new User(adminData);
@@ -126,4 +114,4 @@ const createAdmin = async () => {
 };
 
 // Run the function to create an admin user
-module.exports = { getUsers, viewUserDetails, createUser, updateUser, deleteUser, createAdmin };
+module.exports = { viewUserDetails, createUser, updateUser, deleteUser, createAdmin };
